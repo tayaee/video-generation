@@ -1,0 +1,60 @@
+# H3 2-box 실행 지시서 — 위에서 아래로 순서대로 실행, 한 줄에 명령어 하나씩
+# 왼쪽 40칸 = spark1 / 40칸 지점부터 = spark2-p1-r0 (둘 다 user1)
+# 각 스크립트는 주요 명령을 (set -x)로 echo하고 맨 뒤에 자체 검증까지 수행
+# 실패 시 스크립트 출력의 '+' echo 라인을 보고 판단 (상세: h3.deploy.md)
+spark1                                  spark2
+#
+## Phase 0 — 접속/동기화 (양쪽 병렬)
+cd ~/git/video-generation
+                                        cd ~/git/video-generation
+git pull --ff-only
+                                        git pull --ff-only
+cd video
+                                        cd video
+getent hosts spark2-p1-r0  # CX7 IP 확인
+                                        hostname  # spark2 확인; whoami  # user1
+#
+## Phase 1 — 사전점검 (양쪽 병렬, spark1은 proxy 전에 실행)
+cd infra/dgx-spark-1
+                                        cd infra/dgx-spark-2/service/comfyui
+cd model/minimax-h3
+                                        ./1-preflight.sh
+./1-preflight.sh
+#
+## Phase 2 — 소스/모델 확보 (양쪽 병렬, 시간 소요)
+./2-download.sh all  # 270G 수시간
+                                        ./2-prepare-source.sh
+# spark1 다운로드 대기 중
+                                        ./3-build.sh
+# spark1 계속 대기 중
+                                        ./4-download.sh fl2va  # 중단분 resume
+#
+## Phase 3 — 기동 (양쪽 병렬)
+./3-serve-fl2va.sh  # 최대 3600s
+                                        ./5-up.sh
+./4-smoke-t2va.sh  # smoke 확인
+                                        ./6-fix-torchaudio.sh  # 최초 1회, 수 분
+                                        ./7-first-video.sh  # 가이드 따라 수동
+#
+## Phase 4 — 리버스프록시 (spark1에서만 실행)
+cd ../../service/nginx
+# spark2 대기 (ComfyUI 떠 있어야 proxy 검증 200)
+./proxy-up.sh  # :8188->CX7
+#
+## Phase 5 — 교차 검증 (왼쪽=proxy 경유, 오른쪽=직통)
+curl -s localhost:8188/system_stats
+                                        curl -s localhost:8188/system_stats | head -c 80  # 직통 200
+curl -s localhost:8000/health  # 200
+                                        docker ps --format '{{.Names}} {{.Status}}'
+#
+## Phase 6 — 5분 벤치마크 필름 (spark1)
+cd ~/git/video-generation/video/showcase
+# spark2 대기 (spark1 5분 필름 생성 중)
+cd matchgirl
+./generate.sh  # 20샷x15s, STEPS=10
+cd ..
+./assemble.sh  # 300s 조립
+#
+## 완료 — spark1:8000(vLLM) + spark1:8188 → CX7 → spark2 ComfyUI
+# 정지: spark1에서 video/infra/dgx-spark-1/model/minimax-h3/9-stop-all.sh + docker rm -f proxy-8188
+                                        # 정지: spark2에서 video/infra/dgx-spark-2/service/comfyui/9-stop-all.sh

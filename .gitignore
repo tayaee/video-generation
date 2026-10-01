@@ -1,0 +1,10 @@
+# 빌드 산출물 (nested repo 금지 — ~/git/* canonical에서 생성)
+**/comfyui-src/
+**/proxy-8188/
+# 생성 영상/샷 (GB 단위, 커밋 금지. timings.csv는 벤치마크 기록이라 추적)
+**/shots/
+**/outputs/
+**/*.mp4
+**/logs/
+# Ref2VA 자동추출 레퍼런스 (수동 투입 refs/*.jpg는 추적 가능)
+**/refs/auto_ref_*.jpg
