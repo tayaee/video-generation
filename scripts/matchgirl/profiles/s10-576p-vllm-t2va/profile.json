@@ -1,8 +1,8 @@
 {
   "id": "s10-576p-vllm-t2va",
-  "short": "표준",
-  "title": "표준 스케치판",
-  "purpose": "이야기·연속성 확인용 작업 기준 화질. 래더 첫 주자.",
+  "short": "Standard",
+  "title": "Standard sketch",
+  "purpose": "Working quality for story/continuity check. Ladder lead-off.",
   "engine": "vLLM-Omni FL2VA (spark1)",
   "task": "t2va",
   "steps": 10,

@@ -331,9 +331,9 @@
      ],
      "meta": {
       "id": "s04-352p-comfy-turbo",
-      "short": "초안",
-      "title": "초고속 초안",
-      "purpose": "이야기 리듬 확인용. 8step LoRA를 4스텝으로 돌리는 실험 구성이라 화면 판단용 부적합.",
+      "short": "Draft",
+      "title": "Ultra-fast draft",
+      "purpose": "Rhythm check only. Experimental 4-step on an 8-step LoRA; unsuitable for visual judgment.",
       "engine": "ComfyUI turbo (spark2)",
       "task": "t2v-turbo",
       "steps": 4,
@@ -678,9 +678,9 @@
      ],
      "meta": {
       "id": "s08-352p-comfy-turbo",
-      "short": "스케치",
-      "title": "터보 스케치판",
-      "purpose": "프롬프트·구도 빠른 확인용. 증류 LoRA라 동급 속도 대비 깨끗.",
+      "short": "Sketch",
+      "title": "Turbo sketch",
+      "purpose": "Quick prompt/composition check. Distilled LoRA, clean for its speed.",
       "engine": "ComfyUI turbo (spark2)",
       "task": "t2v-turbo",
       "steps": 8,
@@ -1025,9 +1025,9 @@
      ],
      "meta": {
       "id": "s10-576p-vllm-t2va",
-      "short": "표준",
-      "title": "표준 스케치판",
-      "purpose": "이야기·연속성 확인용 작업 기준 화질. 래더 첫 주자.",
+      "short": "Standard",
+      "title": "Standard sketch",
+      "purpose": "Working quality for story/continuity check. Ladder lead-off.",
       "engine": "vLLM-Omni FL2VA (spark1)",
       "task": "t2va",
       "steps": 10,
@@ -1372,9 +1372,9 @@
      ],
      "meta": {
       "id": "s20-480p-comfy-base",
-      "short": "중간",
-      "title": "중간화질판",
-      "purpose": "turbo와 납품 사이 확인용. LoRA 없는 정석 20스텝.",
+      "short": "Mid",
+      "title": "Mid quality",
+      "purpose": "Between turbo and final. Plain 20-step, no LoRA.",
       "engine": "ComfyUI base (spark2)",
       "task": "t2v-base",
       "steps": 20,
@@ -1427,13 +1427,22 @@
        "e2e_s": 1604.263,
        "steps": 50,
        "prompt": "Photorealistic close-up on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, small bare feet stepping into fresh snow, toes red with cold. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes hurries past shuttered shops. Handheld follow. Snow crunch, ragged breathing, a far-off children's choir rehearsing a carol in Korean, wind gusts."
+      },
+      {
+       "n": "05",
+       "id": "unsold_matches",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/05_unsold_matches_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1603.589,
+       "steps": 50,
+       "prompt": "Photorealistic street level on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, frost-covered bundle of matchboxes in small hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds them up to hurrying passersby legs, no one stops. Static then slight tilt down. Muffled footsteps fading, coins clinking elsewhere, sighing wind."
       }
      ],
      "meta": {
       "id": "s50-576p-vllm-t2va",
-      "short": "납품",
-      "title": "납품판",
-      "purpose": "최종 본편용 최고화질. 샷당 약 40분, 전체 약 20시간.",
+      "short": "Final",
+      "title": "Final delivery",
+      "purpose": "Highest quality for the finished film. About 40 min/shot, 20 h total.",
       "engine": "vLLM-Omni FL2VA (spark1)",
       "task": "t2va",
       "steps": 50,
@@ -1443,8 +1452,8 @@
       "ladder_order": 5
      },
      "stats": {
-      "shot_count": 4,
-      "avg_e2e_s": 1966.9,
+      "shot_count": 5,
+      "avg_e2e_s": 1894.2,
       "min_e2e_s": 1596.8,
       "max_e2e_s": 3022.6
      }

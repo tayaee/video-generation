@@ -1,8 +1,8 @@
 {
   "id": "s08-352p-comfy-turbo",
-  "short": "스케치",
-  "title": "터보 스케치판",
-  "purpose": "프롬프트·구도 빠른 확인용. 증류 LoRA라 동급 속도 대비 깨끗.",
+  "short": "Sketch",
+  "title": "Turbo sketch",
+  "purpose": "Quick prompt/composition check. Distilled LoRA, clean for its speed.",
   "engine": "ComfyUI turbo (spark2)",
   "task": "t2v-turbo",
   "steps": 8,

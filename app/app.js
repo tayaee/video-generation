@@ -8,7 +8,7 @@ async function load() {
   state.data = await res.json();
   const works = Object.keys(state.data.works || {});
   if (!works.length) {
-    document.getElementById("status").textContent = "산출물 없음 (generate 후 gen-manifest 실행)";
+    document.getElementById("status").textContent = "No outputs (run generate, then gen-manifest)";
     return;
   }
   // 작품별 페이지(matchgirl.html 등)는 GALLERY_WORK 고정. 없으면 첫 work.
@@ -57,13 +57,13 @@ function renderGrid() {
     const m = (profiles[p].meta) || {};
     const st = (profiles[p].stats) || {};
     const bits = [m.short, m.steps ? m.steps + "st" : "", m.resolution || ""].filter(Boolean);
-    if (st.avg_e2e_s != null) bits.push("샷당 " + Math.round(st.avg_e2e_s) + "초");
+    if (st.avg_e2e_s != null) bits.push(Math.round(st.avg_e2e_s) + " s/shot");
     if (bits.length) {
       const sub = document.createElement("span");
       sub.className = "prof-label";
       sub.textContent = bits.join(" · ");
       sub.title = (m.title ? m.title + "\n" : "") + (m.purpose || "") + (m.engine ? "\n" + m.engine : "") +
-        (st.avg_e2e_s != null ? "\n평균 " + st.avg_e2e_s + "s/샷 (" + st.shot_count + "샷)" : "");
+        (st.avg_e2e_s != null ? "\navg " + st.avg_e2e_s + "s/shot (" + st.shot_count + " shots)" : "");
       th.appendChild(document.createElement("br"));
       th.appendChild(sub);
     }

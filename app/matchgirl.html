@@ -9,10 +9,11 @@
 <body>
 <header>
   <h1>MiniMax-H3 and ComfyUI Gallery</h1>
+  <p class="links"><a href="https://github.com/tayaee/video-generation/">H3 setup &amp; prompt repo</a> · <a href="https://tayaee.github.io/video-generation/">Gallery</a></p>
   <nav id="works"></nav>
   <div id="controls">
-    <button id="play-all" type="button">▶ 전체 재생</button>
-    <button id="pause-all" type="button">⏸ 전체 정지</button>
+    <button id="play-all" type="button">▶ Play all</button>
+    <button id="pause-all" type="button">⏸ Pause all</button>
     <span id="status"></span>
   </div>
 </header>
@@ -24,9 +25,9 @@
     </table>
   </div>
   <details id="help">
-    <summary>사용법</summary>
-    <p>상단 링크에서 work 선택. 행=샷 번호, 열=프로파일(저화질→고화질). 썸네일 클릭으로 재생/정지.
-    빈 셀은 미생성. 메타는 각 샷의 sidecar JSON에서 읽음.</p>
+    <summary>How to use</summary>
+    <p>Pick a work above. Rows = shot numbers, columns = profiles (low to high quality). Click a thumbnail to play/pause.
+    Empty cells are not generated yet. Metadata comes from each shot's sidecar JSON.</p>
   </details>
 </main>
 <script src="config.js"></script>

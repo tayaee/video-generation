@@ -1,8 +1,8 @@
 {
   "id": "s50-576p-vllm-ref2va",
-  "short": "정합성",
-  "title": "체인 정합성판",
-  "purpose": "이전 샷 끝프레임 체이닝으로 인물·장소 드리프트 최소화. Ref2VA 서버+REF0 필수.",
+  "short": "Consistency",
+  "title": "Chain consistency",
+  "purpose": "Minimizes character/scene drift via previous-shot chaining. Requires Ref2VA server + REF0.",
   "engine": "vLLM-Omni Ref2VA (spark1)",
   "task": "ref2va-chain",
   "steps": 50,
