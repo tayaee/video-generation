@@ -47,12 +47,13 @@ curl -s localhost:8188/system_stats
 curl -s localhost:8000/health  # 200
                                         docker ps --format '{{.Names}} {{.Status}}'
 #
-## Phase 6 — 5분 벤치마크 필름 (spark1)
-cd ~/git/video-generation/video/showcase
-# spark2 대기 (spark1 5분 필름 생성 중)
-cd matchgirl
-./generate.sh  # 20샷x15s, STEPS=10
-cd ..
+## Phase 6 — 5분 벤치마크 필름 (spark1, preview 프로파일)
+cd ~/git/video-generation
+                                        # 대기 (spark1 5분 필름 생성 중)
+cd results/matchgirl/profiles/preview
+./generate.sh  # 20샷x15s
+cd ~/git/video-generation/video
+cd showcase
 ./assemble.sh  # 300s 조립
 #
 ## 완료 — spark1:8000(vLLM) + spark1:8188 → CX7 → spark2 ComfyUI

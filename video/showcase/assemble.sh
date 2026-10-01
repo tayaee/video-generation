@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
 # assemble.sh: 샷들을 concat → 본편 (showcase 공용).
 # 동일 코덱 전제라 -c copy (재인코딩 없음). 샷 부족 시 WARN 후 있는 만큼 조립.
-#   ./assemble.sh                  # 기본: matchgirl/shots → matchgirl/matchgirl_5min.mp4
-#   ./assemble.sh INDIR [OUT]      # 다른 showcase 재사용 (EXPECT/EXPECT_SHOTS env로 조정)
+#   ./assemble.sh  (기본: results/matchgirl/profiles/preview, SHOWCASE_SLUG/QUALITY_PROFILE로 변경)
+#   ./assemble.sh INDIR [OUT]  (위치 직접 지정)
 set -euo pipefail
 
 BASEDIR="$(dirname "$0")"
-# 양산 결과는 /rosenas/data/AIML/comfyui/results/<slug>/ 에 저장 (빈값이면 로컬).
-RESULTS_ROOT="${RESULTS_ROOT-/rosenas/data/AIML/comfyui/results}"
-if [ -n "$RESULTS_ROOT" ]; then DIN="$RESULTS_ROOT/matchgirl/shots"; DOUT="$RESULTS_ROOT/matchgirl/matchgirl_5min.mp4";
-else DIN="$BASEDIR/matchgirl/shots"; DOUT="$BASEDIR/matchgirl/matchgirl_5min.mp4"; fi
-INDIR="${1:-$DIN}"
-OUT="${2:-$DOUT}"
-EXPECT="${EXPECT:-300}"
-EXPECT_SHOTS="${EXPECT_SHOTS:-20}"
+REPO="$(cd "$BASEDIR/../.." && pwd)"
+SHOWCASE_SLUG="${SHOWCASE_SLUG:-matchgirl}"
+QUALITY_PROFILE="${QUALITY_PROFILE:-preview}"
+INDIR="${1:-$REPO/results/$SHOWCASE_SLUG/profiles/$QUALITY_PROFILE/shots}"
+OUT="${2:-$REPO/results/$SHOWCASE_SLUG/profiles/$QUALITY_PROFILE/$SHOWCASE_SLUG.mp4}"
+EXPECT="${EXPECT:-288}"
+EXPECT_SHOTS="${EXPECT_SHOTS:-36}"
 LIST="$INDIR/.concat.txt"
 mkdir -p "$(dirname "$OUT")"
 [ -w "$(dirname "$OUT")" ] || { echo "FAIL: 쓰기 불가: $(dirname "$OUT")"; exit 1; }
