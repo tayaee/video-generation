@@ -11,7 +11,9 @@ async function load() {
     document.getElementById("status").textContent = "산출물 없음 (generate 후 gen-manifest 실행)";
     return;
   }
-  state.work = works[0];
+  // 작품별 페이지(matchgirl.html 등)는 GALLERY_WORK 고정. 없으면 첫 work.
+  const fixed = (typeof GALLERY_WORK !== "undefined" && GALLERY_WORK) || null;
+  state.work = (fixed && works.includes(fixed)) ? fixed : works[0];
   renderNav(works);
   renderGrid();
 }
@@ -21,10 +23,12 @@ function renderNav(works) {
   nav.innerHTML = "";
   for (const w of works) {
     const a = document.createElement("a");
-    a.href = "#";
+    a.href = w + ".html";
     a.textContent = w;
-    if (w === state.work) a.className = "active";
-    a.onclick = (e) => { e.preventDefault(); pauseAll(); state.work = w; renderNav(works); renderGrid(); };
+    if (w === state.work) {
+      a.className = "active";
+      a.onclick = (e) => e.preventDefault();
+    }
     nav.appendChild(a);
   }
 }

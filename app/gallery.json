@@ -1,0 +1,1398 @@
+{
+ "works": {
+  "matchgirl": {
+   "profiles": {
+    "s04-352p-comfy-turbo": {
+     "shots": [
+      {
+       "n": "01",
+       "id": "morning_attic",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/01_morning_attic_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 61.0,
+       "steps": 4,
+       "prompt": "Photorealistic the same small attic room at dawn, frost on the inside of the window. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes wraps a thin shawl, tucks the match bundle inside her coat, and steps out into the cold morning. Slow pull-back. Floorboard creaks, thin blanket rustle, distant rooster, cold wind under the door."
+      },
+      {
+       "n": "02",
+       "id": "lost_slippers",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/02_lost_slippers_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic snowy morning street, two carriages thunder past. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stumbles in oversized slippers, one flies off and a running boy snatches it up laughing, gone around the corner. Handheld panic. Horse hooves, wheel rattle, boy laughter fading, her small cry in Korean, 내 신발!"
+      },
+      {
+       "n": "03",
+       "id": "dusk_street",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/03_dusk_street_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+      },
+      {
+       "n": "04",
+       "id": "barefoot_snow",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/04_barefoot_snow_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic close-up on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, small bare feet stepping into fresh snow, toes red with cold. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes hurries past shuttered shops. Handheld follow. Snow crunch, ragged breathing, a far-off children's choir rehearsing a carol in Korean, wind gusts."
+      },
+      {
+       "n": "05",
+       "id": "unsold_matches",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/05_unsold_matches_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic street level on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, frost-covered bundle of matchboxes in small hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds them up to hurrying passersby legs, no one stops. Static then slight tilt down. Muffled footsteps fading, coins clinking elsewhere, sighing wind."
+      },
+      {
+       "n": "06",
+       "id": "rich_family",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/06_rich_family_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, a wealthy family in furs hurries past with parcels and a toy horse. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches out her matches, the mother pulls her child away without a glance. Slow motion pass. Muffled rich laughter, sleigh bells, her whisper in Korean, 하나만 사주세요."
+      },
+      {
+       "n": "07",
+       "id": "window_feast",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/07_window_feast_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic warm restaurant window on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, diners silhouetted around a feast. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches from the snowy dark outside, nose near glass. Slow push-in. Muffled laughter and clinking cutlery behind glass, cold wind outside."
+      },
+      {
+       "n": "08",
+       "id": "no_home",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/08_no_home_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes looks back toward the lit street, then shakes her head and crouches in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, afraid of her father's switch with no money earned. Trembling close-up. Her chattering whisper in Korean, 빈손으론 못 돌아가, snow hissing on stone."
+      },
+      {
+       "n": "09",
+       "id": "first_strike",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/09_first_strike_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 41.0,
+       "steps": 4,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes crouches and strikes a match against the wall. Sudden flare blooms across her face. Macro of the flame catching. Sharp hiss, held breath, then soft crackle, wind dropping away."
+      },
+      {
+       "n": "10",
+       "id": "stove_vision",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/10_stove_vision_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic dream vision, a great iron stove glowing with brass ornaments, radiant heat waves. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stretches frozen hands toward it, smiling. Slow orbit. Deep fire crackle, metallic ticks, warm low hum."
+      },
+      {
+       "n": "11",
+       "id": "warm_hands",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/11_warm_hands_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic close-up inside the vision, her small red hands open before the glowing stove grate, frost melting off her fingertips into steam. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes sighs with relief. Extreme macro. Steam hiss, soft relieved sigh in Korean, 따뜻해."
+      },
+      {
+       "n": "12",
+       "id": "vision_dies",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/12_vision_dies_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic, the same night, moments later, the stove vision gutters and dissolves back into the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stares at the dead match, smile fading. Match cut to wide. Flame sputter, cold wind rushing back, faint whimper."
+      },
+      {
+       "n": "13",
+       "id": "cold_returns",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/13_cold_returns_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes shivering hard in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, wrapping the coat tighter, teeth chattering, deciding on a second match. Trembling close-up. Chattering teeth, shuddering breaths, snow hissing on stone."
+      },
+      {
+       "n": "14",
+       "id": "second_strike",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/14_second_strike_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a second match flares against the brick, brighter, lighting falling snowflakes like sparks. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes gasps. Slow motion flare. Strike scrape, whoosh of flame, tiny awed gasp."
+      },
+      {
+       "n": "15",
+       "id": "goose_vision",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/15_goose_vision_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic dream vision, a roast goose steaming on a white tablecloth, stuffing and apples, carving knife gleaming. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes leans in wide-eyed. Push-in. Rich sizzle, clink of the knife, warm room tone."
+      },
+      {
+       "n": "16",
+       "id": "goose_rises",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/16_goose_rises_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic dream logic, the roast goose rises with knife and fork in its breast and waddles toward the poor child. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes laughs in delight. Gentle tracking. Playful sizzle, soft child laughter, music-box notes."
+      },
+      {
+       "n": "17",
+       "id": "almost_taste",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/17_almost_taste_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches both hands for the waddling goose, mouth open, and the vision bursts like a soap bubble into cold sparks. Her smile freezes. Rack focus. Bubble pop, cold rush, tiny disappointed cry."
+      },
+      {
+       "n": "18",
+       "id": "dark_again",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/18_dark_again_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic, the vision snaps to the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, snow falling harder. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes alone again under the street lamp. Crane up. Cutoff of music, heavy snowfall hush, distant midnight bells."
+      },
+      {
+       "n": "19",
+       "id": "blizzard",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/19_blizzard_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic whiteout gust through the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes staggers, shields the bundle inside her coat, snow plastering her reddish-gold hair. Low angle struggle. Blizzard roar, coat flapping, her strained breath."
+      },
+      {
+       "n": "20",
+       "id": "last_matches",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/20_last_matches_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 41.0,
+       "steps": 4,
+       "prompt": "Photorealistic close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes opens the bundle with numb fingers and counts the last matches, three left, frost on the box labels. Shallow focus. Cardboard rub, finger tremble foley, wind underneath."
+      },
+      {
+       "n": "21",
+       "id": "third_strike",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/21_third_strike_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a third match bursts into a tall steady flame cupped in both hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes face glowing amber. Low angle. Strong flare-up, cupped-hands warmth tone, snow sizzling."
+      },
+      {
+       "n": "22",
+       "id": "tree_vision",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/22_tree_vision_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic dream vision, a towering Christmas tree covered in lit candles and painted ornaments. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches up in wonder. Slow tilt up. Soft Korean choir, candle sizzle, ornament glass chimes."
+      },
+      {
+       "n": "23",
+       "id": "ornaments",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/23_ornaments_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic inside the vision, glass ornaments reflect her wondering face a hundredfold as a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes touches one gently and it rings. Slow drift. Glass chime, her delighted whisper in Korean, 예쁘다."
+      },
+      {
+       "n": "24",
+       "id": "candles_rise",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/24_candles_rise_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic, the tree candles detach and rise into the night sky as stars. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches, mouth open. Tilt to sky. Korean choir swelling, rising shimmer tone, wind fading to silence."
+      },
+      {
+       "n": "25",
+       "id": "falling_star",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/25_falling_star_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 41.0,
+       "steps": 4,
+       "prompt": "Photorealistic night sky, one star detaches and falls. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes whispers to the dark in Korean, 오늘 밤 누군가 죽어. Extreme close-up on eyes. Hushed Korean whisper, long reverb tail, total stillness."
+      },
+      {
+       "n": "26",
+       "id": "grandmother_memory",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/26_grandmother_memory_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic warm flashback, her beloved grandmother lifts the laughing child onto her lap by a fireplace, the only face that ever loved her. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes as a small child giggles. Soft slow motion. Fireplace crackle, kind humming, child giggle."
+      },
+      {
+       "n": "27",
+       "id": "bundle_decision",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/27_bundle_decision_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic back in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes looks at the last matches, then at the sky where the star fell, and presses the whole bundle together with sudden resolve. Close-up on eyes. Heartbeat rising, matchbox shake, resolve breath."
+      },
+      {
+       "n": "28",
+       "id": "bundle_blaze",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/28_bundle_blaze_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes strikes the whole bundle at once, a bright roaring blaze lighting the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing like noon. Wide shot. Roaring flare, crackling storm of matches, heartbeat drum."
+      },
+      {
+       "n": "29",
+       "id": "grandmother",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/29_grandmother_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic radiant vision, her grandmother appears in warm light, arms open, kindest face, murmuring in Korean, 이제 따뜻할 거야. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes runs into the embrace. Slow motion. Soft Korean murmur and humming lullaby, warmest room tone, faint Korean choir."
+      },
+      {
+       "n": "30",
+       "id": "embrace",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/30_embrace_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic inside the blaze, the grandmother wraps a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes in her shawl, the child sobbing with joy, snowflakes turning to sparks around them. Slow orbit. Shawl fabric, joyful sobs, choir warming."
+      },
+      {
+       "n": "31",
+       "id": "ascent",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/31_ascent_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic ascent above snowy rooftops, the grandmother carrying a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes upward, town shrinking below, snowflakes hanging still. Crane soaring. Korean choir and heartbeat slowing together, then quiet."
+      },
+      {
+       "n": "32",
+       "id": "among_stars",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/32_among_stars_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic, the grandmother and a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes drift among gentle stars, the child asleep on her shoulder, utterly at peace. Weightless drift. Choir dissolving to silence, one soft bell."
+      },
+      {
+       "n": "33",
+       "id": "dawn_alley",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/33_dawn_alley_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic cold dawn, the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing lies empty and blue, thin snow over everything. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes leans against the wall under thin snow, still, the burnt bundle beside her. Slow descent from sky to street. Dawn wind, far-off cock crow, emptiness."
+      },
+      {
+       "n": "34",
+       "id": "dawn_smile",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/34_dawn_smile_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic dawn close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same cold dawn, moments later, her small face with a peaceful smile, cheeks rosy, one burnt match still between her fingers. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes rests forever warm in the vision. Static reverent close-up. Morning stillness, faint thaw drip."
+      },
+      {
+       "n": "35",
+       "id": "found_bells",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/35_found_bells_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic, the same cold dawn, moments later, morning passersby gather and kneel around her in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, a woman covers her with a shawl, church bells ring the New Year. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes is found smiling. Rising crane. Church bells, murmuring crowd, a woman's soft sob in Korean, 불쌍해서 어째."
+      },
+      {
+       "n": "36",
+       "id": "new_year",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/36_new_year_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic New Year morning wide on the same cobblestone street at cold blue dawn, thin snow over everything, pale morning light, the same cold dawn, moments later, sun breaks over snowy rooftops, children run laughing with new toys past the quiet alley, light blooming over the town. Slow pull-back to sky. Children laughter, morning bells, birdsong, thaw dripping into the new year."
+      }
+     ],
+     "meta": {
+      "id": "s04-352p-comfy-turbo",
+      "short": "previz",
+      "title": "초고속 previz",
+      "purpose": "이야기 리듬 확인용. 8step LoRA를 4스텝으로 돌리는 실험 구성이라 화면 판단용 부적합.",
+      "engine": "ComfyUI turbo (spark2)",
+      "task": "t2v-turbo",
+      "steps": 4,
+      "resolution": "608x352",
+      "fps": 24,
+      "duration_s": 5,
+      "ladder_order": 2
+     }
+    },
+    "s08-352p-comfy-turbo": {
+     "shots": [
+      {
+       "n": "01",
+       "id": "morning_attic",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/01_morning_attic_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic the same small attic room at dawn, frost on the inside of the window. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes wraps a thin shawl, tucks the match bundle inside her coat, and steps out into the cold morning. Slow pull-back. Floorboard creaks, thin blanket rustle, distant rooster, cold wind under the door."
+      },
+      {
+       "n": "02",
+       "id": "lost_slippers",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/02_lost_slippers_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic snowy morning street, two carriages thunder past. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stumbles in oversized slippers, one flies off and a running boy snatches it up laughing, gone around the corner. Handheld panic. Horse hooves, wheel rattle, boy laughter fading, her small cry in Korean, 내 신발!"
+      },
+      {
+       "n": "03",
+       "id": "dusk_street",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/03_dusk_street_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+      },
+      {
+       "n": "04",
+       "id": "barefoot_snow",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/04_barefoot_snow_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic close-up on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, small bare feet stepping into fresh snow, toes red with cold. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes hurries past shuttered shops. Handheld follow. Snow crunch, ragged breathing, a far-off children's choir rehearsing a carol in Korean, wind gusts."
+      },
+      {
+       "n": "05",
+       "id": "unsold_matches",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/05_unsold_matches_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic street level on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, frost-covered bundle of matchboxes in small hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds them up to hurrying passersby legs, no one stops. Static then slight tilt down. Muffled footsteps fading, coins clinking elsewhere, sighing wind."
+      },
+      {
+       "n": "06",
+       "id": "rich_family",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/06_rich_family_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, a wealthy family in furs hurries past with parcels and a toy horse. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches out her matches, the mother pulls her child away without a glance. Slow motion pass. Muffled rich laughter, sleigh bells, her whisper in Korean, 하나만 사주세요."
+      },
+      {
+       "n": "07",
+       "id": "window_feast",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/07_window_feast_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic warm restaurant window on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, diners silhouetted around a feast. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches from the snowy dark outside, nose near glass. Slow push-in. Muffled laughter and clinking cutlery behind glass, cold wind outside."
+      },
+      {
+       "n": "08",
+       "id": "no_home",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/08_no_home_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes looks back toward the lit street, then shakes her head and crouches in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, afraid of her father's switch with no money earned. Trembling close-up. Her chattering whisper in Korean, 빈손으론 못 돌아가, snow hissing on stone."
+      },
+      {
+       "n": "09",
+       "id": "first_strike",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/09_first_strike_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes crouches and strikes a match against the wall. Sudden flare blooms across her face. Macro of the flame catching. Sharp hiss, held breath, then soft crackle, wind dropping away."
+      },
+      {
+       "n": "10",
+       "id": "stove_vision",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/10_stove_vision_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic dream vision, a great iron stove glowing with brass ornaments, radiant heat waves. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stretches frozen hands toward it, smiling. Slow orbit. Deep fire crackle, metallic ticks, warm low hum."
+      },
+      {
+       "n": "11",
+       "id": "warm_hands",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/11_warm_hands_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic close-up inside the vision, her small red hands open before the glowing stove grate, frost melting off her fingertips into steam. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes sighs with relief. Extreme macro. Steam hiss, soft relieved sigh in Korean, 따뜻해."
+      },
+      {
+       "n": "12",
+       "id": "vision_dies",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/12_vision_dies_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic, the same night, moments later, the stove vision gutters and dissolves back into the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stares at the dead match, smile fading. Match cut to wide. Flame sputter, cold wind rushing back, faint whimper."
+      },
+      {
+       "n": "13",
+       "id": "cold_returns",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/13_cold_returns_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes shivering hard in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, wrapping the coat tighter, teeth chattering, deciding on a second match. Trembling close-up. Chattering teeth, shuddering breaths, snow hissing on stone."
+      },
+      {
+       "n": "14",
+       "id": "second_strike",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/14_second_strike_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a second match flares against the brick, brighter, lighting falling snowflakes like sparks. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes gasps. Slow motion flare. Strike scrape, whoosh of flame, tiny awed gasp."
+      },
+      {
+       "n": "15",
+       "id": "goose_vision",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/15_goose_vision_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic dream vision, a roast goose steaming on a white tablecloth, stuffing and apples, carving knife gleaming. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes leans in wide-eyed. Push-in. Rich sizzle, clink of the knife, warm room tone."
+      },
+      {
+       "n": "16",
+       "id": "goose_rises",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/16_goose_rises_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic dream logic, the roast goose rises with knife and fork in its breast and waddles toward the poor child. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes laughs in delight. Gentle tracking. Playful sizzle, soft child laughter, music-box notes."
+      },
+      {
+       "n": "17",
+       "id": "almost_taste",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/17_almost_taste_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches both hands for the waddling goose, mouth open, and the vision bursts like a soap bubble into cold sparks. Her smile freezes. Rack focus. Bubble pop, cold rush, tiny disappointed cry."
+      },
+      {
+       "n": "18",
+       "id": "dark_again",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/18_dark_again_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic, the vision snaps to the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, snow falling harder. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes alone again under the street lamp. Crane up. Cutoff of music, heavy snowfall hush, distant midnight bells."
+      },
+      {
+       "n": "19",
+       "id": "blizzard",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/19_blizzard_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic whiteout gust through the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes staggers, shields the bundle inside her coat, snow plastering her reddish-gold hair. Low angle struggle. Blizzard roar, coat flapping, her strained breath."
+      },
+      {
+       "n": "20",
+       "id": "last_matches",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/20_last_matches_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes opens the bundle with numb fingers and counts the last matches, three left, frost on the box labels. Shallow focus. Cardboard rub, finger tremble foley, wind underneath."
+      },
+      {
+       "n": "21",
+       "id": "third_strike",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/21_third_strike_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a third match bursts into a tall steady flame cupped in both hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes face glowing amber. Low angle. Strong flare-up, cupped-hands warmth tone, snow sizzling."
+      },
+      {
+       "n": "22",
+       "id": "tree_vision",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/22_tree_vision_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic dream vision, a towering Christmas tree covered in lit candles and painted ornaments. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches up in wonder. Slow tilt up. Soft Korean choir, candle sizzle, ornament glass chimes."
+      },
+      {
+       "n": "23",
+       "id": "ornaments",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/23_ornaments_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic inside the vision, glass ornaments reflect her wondering face a hundredfold as a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes touches one gently and it rings. Slow drift. Glass chime, her delighted whisper in Korean, 예쁘다."
+      },
+      {
+       "n": "24",
+       "id": "candles_rise",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/24_candles_rise_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic, the tree candles detach and rise into the night sky as stars. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches, mouth open. Tilt to sky. Korean choir swelling, rising shimmer tone, wind fading to silence."
+      },
+      {
+       "n": "25",
+       "id": "falling_star",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/25_falling_star_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic night sky, one star detaches and falls. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes whispers to the dark in Korean, 오늘 밤 누군가 죽어. Extreme close-up on eyes. Hushed Korean whisper, long reverb tail, total stillness."
+      },
+      {
+       "n": "26",
+       "id": "grandmother_memory",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/26_grandmother_memory_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic warm flashback, her beloved grandmother lifts the laughing child onto her lap by a fireplace, the only face that ever loved her. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes as a small child giggles. Soft slow motion. Fireplace crackle, kind humming, child giggle."
+      },
+      {
+       "n": "27",
+       "id": "bundle_decision",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/27_bundle_decision_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic back in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes looks at the last matches, then at the sky where the star fell, and presses the whole bundle together with sudden resolve. Close-up on eyes. Heartbeat rising, matchbox shake, resolve breath."
+      },
+      {
+       "n": "28",
+       "id": "bundle_blaze",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/28_bundle_blaze_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes strikes the whole bundle at once, a bright roaring blaze lighting the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing like noon. Wide shot. Roaring flare, crackling storm of matches, heartbeat drum."
+      },
+      {
+       "n": "29",
+       "id": "grandmother",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/29_grandmother_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic radiant vision, her grandmother appears in warm light, arms open, kindest face, murmuring in Korean, 이제 따뜻할 거야. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes runs into the embrace. Slow motion. Soft Korean murmur and humming lullaby, warmest room tone, faint Korean choir."
+      },
+      {
+       "n": "30",
+       "id": "embrace",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/30_embrace_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic inside the blaze, the grandmother wraps a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes in her shawl, the child sobbing with joy, snowflakes turning to sparks around them. Slow orbit. Shawl fabric, joyful sobs, choir warming."
+      },
+      {
+       "n": "31",
+       "id": "ascent",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/31_ascent_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic ascent above snowy rooftops, the grandmother carrying a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes upward, town shrinking below, snowflakes hanging still. Crane soaring. Korean choir and heartbeat slowing together, then quiet."
+      },
+      {
+       "n": "32",
+       "id": "among_stars",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/32_among_stars_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic, the grandmother and a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes drift among gentle stars, the child asleep on her shoulder, utterly at peace. Weightless drift. Choir dissolving to silence, one soft bell."
+      },
+      {
+       "n": "33",
+       "id": "dawn_alley",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/33_dawn_alley_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic cold dawn, the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing lies empty and blue, thin snow over everything. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes leans against the wall under thin snow, still, the burnt bundle beside her. Slow descent from sky to street. Dawn wind, far-off cock crow, emptiness."
+      },
+      {
+       "n": "34",
+       "id": "dawn_smile",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/34_dawn_smile_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic dawn close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same cold dawn, moments later, her small face with a peaceful smile, cheeks rosy, one burnt match still between her fingers. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes rests forever warm in the vision. Static reverent close-up. Morning stillness, faint thaw drip."
+      },
+      {
+       "n": "35",
+       "id": "found_bells",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/35_found_bells_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic, the same cold dawn, moments later, morning passersby gather and kneel around her in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, a woman covers her with a shawl, church bells ring the New Year. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes is found smiling. Rising crane. Church bells, murmuring crowd, a woman's soft sob in Korean, 불쌍해서 어째."
+      },
+      {
+       "n": "36",
+       "id": "new_year",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/36_new_year_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 81.0,
+       "steps": 8,
+       "prompt": "Photorealistic New Year morning wide on the same cobblestone street at cold blue dawn, thin snow over everything, pale morning light, the same cold dawn, moments later, sun breaks over snowy rooftops, children run laughing with new toys past the quiet alley, light blooming over the town. Slow pull-back to sky. Children laughter, morning bells, birdsong, thaw dripping into the new year."
+      }
+     ],
+     "meta": {
+      "id": "s08-352p-comfy-turbo",
+      "short": "스케치",
+      "title": "터보 스케치판",
+      "purpose": "프롬프트·구도 빠른 확인용. 증류 LoRA라 동급 속도 대비 깨끗.",
+      "engine": "ComfyUI turbo (spark2)",
+      "task": "t2v-turbo",
+      "steps": 8,
+      "resolution": "608x352",
+      "fps": 24,
+      "duration_s": 5,
+      "ladder_order": 3
+     }
+    },
+    "s10-576p-vllm-t2va": {
+     "shots": [
+      {
+       "n": "01",
+       "id": "morning_attic",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/01_morning_attic_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 292.254,
+       "steps": 10,
+       "prompt": "Photorealistic the same small attic room at dawn, frost on the inside of the window. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes wraps a thin shawl, tucks the match bundle inside her coat, and steps out into the cold morning. Slow pull-back. Floorboard creaks, thin blanket rustle, distant rooster, cold wind under the door."
+      },
+      {
+       "n": "02",
+       "id": "lost_slippers",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/02_lost_slippers_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 327.824,
+       "steps": 10,
+       "prompt": "Photorealistic snowy morning street, two carriages thunder past. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stumbles in oversized slippers, one flies off and a running boy snatches it up laughing, gone around the corner. Handheld panic. Horse hooves, wheel rattle, boy laughter fading, her small cry in Korean, 내 신발!"
+      },
+      {
+       "n": "03",
+       "id": "dusk_street",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/03_dusk_street_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 323.266,
+       "steps": 10,
+       "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+      },
+      {
+       "n": "04",
+       "id": "barefoot_snow",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/04_barefoot_snow_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 333.583,
+       "steps": 10,
+       "prompt": "Photorealistic close-up on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, small bare feet stepping into fresh snow, toes red with cold. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes hurries past shuttered shops. Handheld follow. Snow crunch, ragged breathing, a far-off children's choir rehearsing a carol in Korean, wind gusts."
+      },
+      {
+       "n": "05",
+       "id": "unsold_matches",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/05_unsold_matches_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 336.791,
+       "steps": 10,
+       "prompt": "Photorealistic street level on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, frost-covered bundle of matchboxes in small hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds them up to hurrying passersby legs, no one stops. Static then slight tilt down. Muffled footsteps fading, coins clinking elsewhere, sighing wind."
+      },
+      {
+       "n": "06",
+       "id": "rich_family",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/06_rich_family_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 335.775,
+       "steps": 10,
+       "prompt": "Photorealistic on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, a wealthy family in furs hurries past with parcels and a toy horse. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches out her matches, the mother pulls her child away without a glance. Slow motion pass. Muffled rich laughter, sleigh bells, her whisper in Korean, 하나만 사주세요."
+      },
+      {
+       "n": "07",
+       "id": "window_feast",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/07_window_feast_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 340.052,
+       "steps": 10,
+       "prompt": "Photorealistic warm restaurant window on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, diners silhouetted around a feast. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches from the snowy dark outside, nose near glass. Slow push-in. Muffled laughter and clinking cutlery behind glass, cold wind outside."
+      },
+      {
+       "n": "08",
+       "id": "no_home",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/08_no_home_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 340.962,
+       "steps": 10,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes looks back toward the lit street, then shakes her head and crouches in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, afraid of her father's switch with no money earned. Trembling close-up. Her chattering whisper in Korean, 빈손으론 못 돌아가, snow hissing on stone."
+      },
+      {
+       "n": "09",
+       "id": "first_strike",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/09_first_strike_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 334.069,
+       "steps": 10,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes crouches and strikes a match against the wall. Sudden flare blooms across her face. Macro of the flame catching. Sharp hiss, held breath, then soft crackle, wind dropping away."
+      },
+      {
+       "n": "10",
+       "id": "stove_vision",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/10_stove_vision_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 325.707,
+       "steps": 10,
+       "prompt": "Photorealistic dream vision, a great iron stove glowing with brass ornaments, radiant heat waves. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stretches frozen hands toward it, smiling. Slow orbit. Deep fire crackle, metallic ticks, warm low hum."
+      },
+      {
+       "n": "11",
+       "id": "warm_hands",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/11_warm_hands_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 340.091,
+       "steps": 10,
+       "prompt": "Photorealistic close-up inside the vision, her small red hands open before the glowing stove grate, frost melting off her fingertips into steam. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes sighs with relief. Extreme macro. Steam hiss, soft relieved sigh in Korean, 따뜻해."
+      },
+      {
+       "n": "12",
+       "id": "vision_dies",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/12_vision_dies_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 340.774,
+       "steps": 10,
+       "prompt": "Photorealistic, the same night, moments later, the stove vision gutters and dissolves back into the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stares at the dead match, smile fading. Match cut to wide. Flame sputter, cold wind rushing back, faint whimper."
+      },
+      {
+       "n": "13",
+       "id": "cold_returns",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/13_cold_returns_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 353.622,
+       "steps": 10,
+       "prompt": "Photorealistic, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes shivering hard in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, wrapping the coat tighter, teeth chattering, deciding on a second match. Trembling close-up. Chattering teeth, shuddering breaths, snow hissing on stone."
+      },
+      {
+       "n": "14",
+       "id": "second_strike",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/14_second_strike_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 338.813,
+       "steps": 10,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a second match flares against the brick, brighter, lighting falling snowflakes like sparks. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes gasps. Slow motion flare. Strike scrape, whoosh of flame, tiny awed gasp."
+      },
+      {
+       "n": "15",
+       "id": "goose_vision",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/15_goose_vision_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 334.899,
+       "steps": 10,
+       "prompt": "Photorealistic dream vision, a roast goose steaming on a white tablecloth, stuffing and apples, carving knife gleaming. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes leans in wide-eyed. Push-in. Rich sizzle, clink of the knife, warm room tone."
+      },
+      {
+       "n": "16",
+       "id": "goose_rises",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/16_goose_rises_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 339.775,
+       "steps": 10,
+       "prompt": "Photorealistic dream logic, the roast goose rises with knife and fork in its breast and waddles toward the poor child. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes laughs in delight. Gentle tracking. Playful sizzle, soft child laughter, music-box notes."
+      },
+      {
+       "n": "17",
+       "id": "almost_taste",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/17_almost_taste_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 339.578,
+       "steps": 10,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches both hands for the waddling goose, mouth open, and the vision bursts like a soap bubble into cold sparks. Her smile freezes. Rack focus. Bubble pop, cold rush, tiny disappointed cry."
+      },
+      {
+       "n": "18",
+       "id": "dark_again",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/18_dark_again_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 341.635,
+       "steps": 10,
+       "prompt": "Photorealistic, the vision snaps to the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, snow falling harder. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes alone again under the street lamp. Crane up. Cutoff of music, heavy snowfall hush, distant midnight bells."
+      },
+      {
+       "n": "19",
+       "id": "blizzard",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/19_blizzard_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 332.035,
+       "steps": 10,
+       "prompt": "Photorealistic whiteout gust through the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes staggers, shields the bundle inside her coat, snow plastering her reddish-gold hair. Low angle struggle. Blizzard roar, coat flapping, her strained breath."
+      },
+      {
+       "n": "20",
+       "id": "last_matches",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/20_last_matches_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 327.045,
+       "steps": 10,
+       "prompt": "Photorealistic close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes opens the bundle with numb fingers and counts the last matches, three left, frost on the box labels. Shallow focus. Cardboard rub, finger tremble foley, wind underneath."
+      },
+      {
+       "n": "21",
+       "id": "third_strike",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/21_third_strike_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 333.347,
+       "steps": 10,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a third match bursts into a tall steady flame cupped in both hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes face glowing amber. Low angle. Strong flare-up, cupped-hands warmth tone, snow sizzling."
+      },
+      {
+       "n": "22",
+       "id": "tree_vision",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/22_tree_vision_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 328.927,
+       "steps": 10,
+       "prompt": "Photorealistic dream vision, a towering Christmas tree covered in lit candles and painted ornaments. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches up in wonder. Slow tilt up. Soft Korean choir, candle sizzle, ornament glass chimes."
+      },
+      {
+       "n": "23",
+       "id": "ornaments",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/23_ornaments_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 324.62,
+       "steps": 10,
+       "prompt": "Photorealistic inside the vision, glass ornaments reflect her wondering face a hundredfold as a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes touches one gently and it rings. Slow drift. Glass chime, her delighted whisper in Korean, 예쁘다."
+      },
+      {
+       "n": "24",
+       "id": "candles_rise",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/24_candles_rise_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 336.679,
+       "steps": 10,
+       "prompt": "Photorealistic, the tree candles detach and rise into the night sky as stars. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches, mouth open. Tilt to sky. Korean choir swelling, rising shimmer tone, wind fading to silence."
+      },
+      {
+       "n": "25",
+       "id": "falling_star",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/25_falling_star_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 336.455,
+       "steps": 10,
+       "prompt": "Photorealistic night sky, one star detaches and falls. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes whispers to the dark in Korean, 오늘 밤 누군가 죽어. Extreme close-up on eyes. Hushed Korean whisper, long reverb tail, total stillness."
+      },
+      {
+       "n": "26",
+       "id": "grandmother_memory",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/26_grandmother_memory_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 337.469,
+       "steps": 10,
+       "prompt": "Photorealistic warm flashback, her beloved grandmother lifts the laughing child onto her lap by a fireplace, the only face that ever loved her. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes as a small child giggles. Soft slow motion. Fireplace crackle, kind humming, child giggle."
+      },
+      {
+       "n": "27",
+       "id": "bundle_decision",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/27_bundle_decision_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 336.752,
+       "steps": 10,
+       "prompt": "Photorealistic back in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes looks at the last matches, then at the sky where the star fell, and presses the whole bundle together with sudden resolve. Close-up on eyes. Heartbeat rising, matchbox shake, resolve breath."
+      },
+      {
+       "n": "28",
+       "id": "bundle_blaze",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/28_bundle_blaze_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 343.605,
+       "steps": 10,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes strikes the whole bundle at once, a bright roaring blaze lighting the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing like noon. Wide shot. Roaring flare, crackling storm of matches, heartbeat drum."
+      },
+      {
+       "n": "29",
+       "id": "grandmother",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/29_grandmother_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 339.342,
+       "steps": 10,
+       "prompt": "Photorealistic radiant vision, her grandmother appears in warm light, arms open, kindest face, murmuring in Korean, 이제 따뜻할 거야. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes runs into the embrace. Slow motion. Soft Korean murmur and humming lullaby, warmest room tone, faint Korean choir."
+      },
+      {
+       "n": "30",
+       "id": "embrace",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/30_embrace_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 345.302,
+       "steps": 10,
+       "prompt": "Photorealistic inside the blaze, the grandmother wraps a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes in her shawl, the child sobbing with joy, snowflakes turning to sparks around them. Slow orbit. Shawl fabric, joyful sobs, choir warming."
+      },
+      {
+       "n": "31",
+       "id": "ascent",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/31_ascent_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 338.553,
+       "steps": 10,
+       "prompt": "Photorealistic ascent above snowy rooftops, the grandmother carrying a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes upward, town shrinking below, snowflakes hanging still. Crane soaring. Korean choir and heartbeat slowing together, then quiet."
+      },
+      {
+       "n": "32",
+       "id": "among_stars",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/32_among_stars_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 342.171,
+       "steps": 10,
+       "prompt": "Photorealistic, the grandmother and a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes drift among gentle stars, the child asleep on her shoulder, utterly at peace. Weightless drift. Choir dissolving to silence, one soft bell."
+      },
+      {
+       "n": "33",
+       "id": "dawn_alley",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/33_dawn_alley_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 362.332,
+       "steps": 10,
+       "prompt": "Photorealistic cold dawn, the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing lies empty and blue, thin snow over everything. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes leans against the wall under thin snow, still, the burnt bundle beside her. Slow descent from sky to street. Dawn wind, far-off cock crow, emptiness."
+      },
+      {
+       "n": "34",
+       "id": "dawn_smile",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/34_dawn_smile_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 347.296,
+       "steps": 10,
+       "prompt": "Photorealistic dawn close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same cold dawn, moments later, her small face with a peaceful smile, cheeks rosy, one burnt match still between her fingers. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes rests forever warm in the vision. Static reverent close-up. Morning stillness, faint thaw drip."
+      },
+      {
+       "n": "35",
+       "id": "found_bells",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/35_found_bells_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 347.413,
+       "steps": 10,
+       "prompt": "Photorealistic, the same cold dawn, moments later, morning passersby gather and kneel around her in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, a woman covers her with a shawl, church bells ring the New Year. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes is found smiling. Rising crane. Church bells, murmuring crowd, a woman's soft sob in Korean, 불쌍해서 어째."
+      },
+      {
+       "n": "36",
+       "id": "new_year",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/36_new_year_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 344.096,
+       "steps": 10,
+       "prompt": "Photorealistic New Year morning wide on the same cobblestone street at cold blue dawn, thin snow over everything, pale morning light, the same cold dawn, moments later, sun breaks over snowy rooftops, children run laughing with new toys past the quiet alley, light blooming over the town. Slow pull-back to sky. Children laughter, morning bells, birdsong, thaw dripping into the new year."
+      }
+     ],
+     "meta": {
+      "id": "s10-576p-vllm-t2va",
+      "short": "표준",
+      "title": "표준 스케치판",
+      "purpose": "이야기·연속성 확인용 작업 기준 화질. 래더 첫 주자.",
+      "engine": "vLLM-Omni FL2VA (spark1)",
+      "task": "t2va",
+      "steps": 10,
+      "resolution": "960x576",
+      "fps": 24,
+      "duration_s": 5,
+      "ladder_order": 1
+     }
+    },
+    "s20-480p-comfy-base": {
+     "shots": [
+      {
+       "n": "01",
+       "id": "morning_attic",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/01_morning_attic_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 360.0,
+       "steps": 20,
+       "prompt": "Photorealistic the same small attic room at dawn, frost on the inside of the window. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes wraps a thin shawl, tucks the match bundle inside her coat, and steps out into the cold morning. Slow pull-back. Floorboard creaks, thin blanket rustle, distant rooster, cold wind under the door."
+      },
+      {
+       "n": "02",
+       "id": "lost_slippers",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/02_lost_slippers_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic snowy morning street, two carriages thunder past. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stumbles in oversized slippers, one flies off and a running boy snatches it up laughing, gone around the corner. Handheld panic. Horse hooves, wheel rattle, boy laughter fading, her small cry in Korean, 내 신발!"
+      },
+      {
+       "n": "03",
+       "id": "dusk_street",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/03_dusk_street_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+      },
+      {
+       "n": "04",
+       "id": "barefoot_snow",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/04_barefoot_snow_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic close-up on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, small bare feet stepping into fresh snow, toes red with cold. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes hurries past shuttered shops. Handheld follow. Snow crunch, ragged breathing, a far-off children's choir rehearsing a carol in Korean, wind gusts."
+      },
+      {
+       "n": "05",
+       "id": "unsold_matches",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/05_unsold_matches_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic street level on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, frost-covered bundle of matchboxes in small hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds them up to hurrying passersby legs, no one stops. Static then slight tilt down. Muffled footsteps fading, coins clinking elsewhere, sighing wind."
+      },
+      {
+       "n": "06",
+       "id": "rich_family",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/06_rich_family_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, a wealthy family in furs hurries past with parcels and a toy horse. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches out her matches, the mother pulls her child away without a glance. Slow motion pass. Muffled rich laughter, sleigh bells, her whisper in Korean, 하나만 사주세요."
+      },
+      {
+       "n": "07",
+       "id": "window_feast",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/07_window_feast_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic warm restaurant window on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, diners silhouetted around a feast. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches from the snowy dark outside, nose near glass. Slow push-in. Muffled laughter and clinking cutlery behind glass, cold wind outside."
+      },
+      {
+       "n": "08",
+       "id": "no_home",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/08_no_home_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes looks back toward the lit street, then shakes her head and crouches in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, afraid of her father's switch with no money earned. Trembling close-up. Her chattering whisper in Korean, 빈손으론 못 돌아가, snow hissing on stone."
+      },
+      {
+       "n": "09",
+       "id": "first_strike",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/09_first_strike_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes crouches and strikes a match against the wall. Sudden flare blooms across her face. Macro of the flame catching. Sharp hiss, held breath, then soft crackle, wind dropping away."
+      },
+      {
+       "n": "10",
+       "id": "stove_vision",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/10_stove_vision_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic dream vision, a great iron stove glowing with brass ornaments, radiant heat waves. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stretches frozen hands toward it, smiling. Slow orbit. Deep fire crackle, metallic ticks, warm low hum."
+      },
+      {
+       "n": "11",
+       "id": "warm_hands",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/11_warm_hands_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic close-up inside the vision, her small red hands open before the glowing stove grate, frost melting off her fingertips into steam. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes sighs with relief. Extreme macro. Steam hiss, soft relieved sigh in Korean, 따뜻해."
+      },
+      {
+       "n": "12",
+       "id": "vision_dies",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/12_vision_dies_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic, the same night, moments later, the stove vision gutters and dissolves back into the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stares at the dead match, smile fading. Match cut to wide. Flame sputter, cold wind rushing back, faint whimper."
+      },
+      {
+       "n": "13",
+       "id": "cold_returns",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/13_cold_returns_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes shivering hard in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, wrapping the coat tighter, teeth chattering, deciding on a second match. Trembling close-up. Chattering teeth, shuddering breaths, snow hissing on stone."
+      },
+      {
+       "n": "14",
+       "id": "second_strike",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/14_second_strike_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a second match flares against the brick, brighter, lighting falling snowflakes like sparks. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes gasps. Slow motion flare. Strike scrape, whoosh of flame, tiny awed gasp."
+      },
+      {
+       "n": "15",
+       "id": "goose_vision",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/15_goose_vision_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic dream vision, a roast goose steaming on a white tablecloth, stuffing and apples, carving knife gleaming. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes leans in wide-eyed. Push-in. Rich sizzle, clink of the knife, warm room tone."
+      },
+      {
+       "n": "16",
+       "id": "goose_rises",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/16_goose_rises_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic dream logic, the roast goose rises with knife and fork in its breast and waddles toward the poor child. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes laughs in delight. Gentle tracking. Playful sizzle, soft child laughter, music-box notes."
+      },
+      {
+       "n": "17",
+       "id": "almost_taste",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/17_almost_taste_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches both hands for the waddling goose, mouth open, and the vision bursts like a soap bubble into cold sparks. Her smile freezes. Rack focus. Bubble pop, cold rush, tiny disappointed cry."
+      },
+      {
+       "n": "18",
+       "id": "dark_again",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/18_dark_again_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic, the vision snaps to the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, snow falling harder. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes alone again under the street lamp. Crane up. Cutoff of music, heavy snowfall hush, distant midnight bells."
+      },
+      {
+       "n": "19",
+       "id": "blizzard",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/19_blizzard_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic whiteout gust through the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes staggers, shields the bundle inside her coat, snow plastering her reddish-gold hair. Low angle struggle. Blizzard roar, coat flapping, her strained breath."
+      },
+      {
+       "n": "20",
+       "id": "last_matches",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/20_last_matches_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes opens the bundle with numb fingers and counts the last matches, three left, frost on the box labels. Shallow focus. Cardboard rub, finger tremble foley, wind underneath."
+      },
+      {
+       "n": "21",
+       "id": "third_strike",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/21_third_strike_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a third match bursts into a tall steady flame cupped in both hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes face glowing amber. Low angle. Strong flare-up, cupped-hands warmth tone, snow sizzling."
+      },
+      {
+       "n": "22",
+       "id": "tree_vision",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/22_tree_vision_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic dream vision, a towering Christmas tree covered in lit candles and painted ornaments. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches up in wonder. Slow tilt up. Soft Korean choir, candle sizzle, ornament glass chimes."
+      },
+      {
+       "n": "23",
+       "id": "ornaments",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/23_ornaments_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic inside the vision, glass ornaments reflect her wondering face a hundredfold as a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes touches one gently and it rings. Slow drift. Glass chime, her delighted whisper in Korean, 예쁘다."
+      },
+      {
+       "n": "24",
+       "id": "candles_rise",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/24_candles_rise_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic, the tree candles detach and rise into the night sky as stars. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches, mouth open. Tilt to sky. Korean choir swelling, rising shimmer tone, wind fading to silence."
+      },
+      {
+       "n": "25",
+       "id": "falling_star",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/25_falling_star_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic night sky, one star detaches and falls. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes whispers to the dark in Korean, 오늘 밤 누군가 죽어. Extreme close-up on eyes. Hushed Korean whisper, long reverb tail, total stillness."
+      },
+      {
+       "n": "26",
+       "id": "grandmother_memory",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/26_grandmother_memory_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic warm flashback, her beloved grandmother lifts the laughing child onto her lap by a fireplace, the only face that ever loved her. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes as a small child giggles. Soft slow motion. Fireplace crackle, kind humming, child giggle."
+      },
+      {
+       "n": "27",
+       "id": "bundle_decision",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/27_bundle_decision_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic back in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes looks at the last matches, then at the sky where the star fell, and presses the whole bundle together with sudden resolve. Close-up on eyes. Heartbeat rising, matchbox shake, resolve breath."
+      },
+      {
+       "n": "28",
+       "id": "bundle_blaze",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/28_bundle_blaze_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes strikes the whole bundle at once, a bright roaring blaze lighting the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing like noon. Wide shot. Roaring flare, crackling storm of matches, heartbeat drum."
+      },
+      {
+       "n": "29",
+       "id": "grandmother",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/29_grandmother_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic radiant vision, her grandmother appears in warm light, arms open, kindest face, murmuring in Korean, 이제 따뜻할 거야. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes runs into the embrace. Slow motion. Soft Korean murmur and humming lullaby, warmest room tone, faint Korean choir."
+      },
+      {
+       "n": "30",
+       "id": "embrace",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/30_embrace_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic inside the blaze, the grandmother wraps a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes in her shawl, the child sobbing with joy, snowflakes turning to sparks around them. Slow orbit. Shawl fabric, joyful sobs, choir warming."
+      },
+      {
+       "n": "31",
+       "id": "ascent",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/31_ascent_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic ascent above snowy rooftops, the grandmother carrying a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes upward, town shrinking below, snowflakes hanging still. Crane soaring. Korean choir and heartbeat slowing together, then quiet."
+      },
+      {
+       "n": "32",
+       "id": "among_stars",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/32_among_stars_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic, the grandmother and a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes drift among gentle stars, the child asleep on her shoulder, utterly at peace. Weightless drift. Choir dissolving to silence, one soft bell."
+      },
+      {
+       "n": "33",
+       "id": "dawn_alley",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/33_dawn_alley_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic cold dawn, the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing lies empty and blue, thin snow over everything. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes leans against the wall under thin snow, still, the burnt bundle beside her. Slow descent from sky to street. Dawn wind, far-off cock crow, emptiness."
+      },
+      {
+       "n": "34",
+       "id": "dawn_smile",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/34_dawn_smile_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic dawn close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same cold dawn, moments later, her small face with a peaceful smile, cheeks rosy, one burnt match still between her fingers. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes rests forever warm in the vision. Static reverent close-up. Morning stillness, faint thaw drip."
+      },
+      {
+       "n": "35",
+       "id": "found_bells",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/35_found_bells_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic, the same cold dawn, moments later, morning passersby gather and kneel around her in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, a woman covers her with a shawl, church bells ring the New Year. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes is found smiling. Rising crane. Church bells, murmuring crowd, a woman's soft sob in Korean, 불쌍해서 어째."
+      },
+      {
+       "n": "36",
+       "id": "new_year",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/36_new_year_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 300.0,
+       "steps": 20,
+       "prompt": "Photorealistic New Year morning wide on the same cobblestone street at cold blue dawn, thin snow over everything, pale morning light, the same cold dawn, moments later, sun breaks over snowy rooftops, children run laughing with new toys past the quiet alley, light blooming over the town. Slow pull-back to sky. Children laughter, morning bells, birdsong, thaw dripping into the new year."
+      }
+     ],
+     "meta": {
+      "id": "s20-480p-comfy-base",
+      "short": "중간",
+      "title": "중간화질판",
+      "purpose": "turbo와 납품 사이 확인용. LoRA 없는 정석 20스텝.",
+      "engine": "ComfyUI base (spark2)",
+      "task": "t2v-base",
+      "steps": 20,
+      "resolution": "864x480",
+      "fps": 24,
+      "duration_s": 5,
+      "ladder_order": 4
+     }
+    },
+    "s50-576p-vllm-t2va": {
+     "shots": [
+      {
+       "n": "01",
+       "id": "morning_attic",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/01_morning_attic_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1643.801,
+       "steps": 50,
+       "prompt": "Photorealistic the same small attic room at dawn, frost on the inside of the window. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes wraps a thin shawl, tucks the match bundle inside her coat, and steps out into the cold morning. Slow pull-back. Floorboard creaks, thin blanket rustle, distant rooster, cold wind under the door."
+      }
+     ],
+     "meta": {
+      "id": "s50-576p-vllm-t2va",
+      "short": "납품",
+      "title": "납품판",
+      "purpose": "최종 본편용 최고화질. 샷당 약 40분, 전체 약 20시간.",
+      "engine": "vLLM-Omni FL2VA (spark1)",
+      "task": "t2va",
+      "steps": 50,
+      "resolution": "960x576",
+      "fps": 24,
+      "duration_s": 5,
+      "ladder_order": 5
+     }
+    }
+   }
+  }
+ }
+}

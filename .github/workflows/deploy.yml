@@ -1,10 +1,11 @@
-name: Deploy docs to GitHub Pages
+name: Deploy app to GitHub Pages
 
 on:
   push:
     branches: ["main"]
     paths:
-      - 'docs/**' # docs 폴더 내부 파일이 변경되었을 때만 실행
+      - "app/**"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -31,7 +32,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs' # 배포할 대상 폴더
+          path: "app"
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# scripts/common/gen-manifest.sh: results/ 아래 산출물 스캔 → docs/gallery.json 생성.
+# scripts/common/gen-manifest.sh: results/ 아래 산출물 스캔 → app/gallery.json 생성.
 #   ./gen-manifest.sh                    # 전체 work·전체 샷
 #   WORK=matchgirl ./gen-manifest.sh     # 특정 work만
 #   SHOTS=03 ./gen-manifest.sh           # 특정 샷만 (콤마 구분: SHOTS=03,04,05)
@@ -9,7 +9,7 @@ set -euo pipefail
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 WORK_FILTER="${WORK:-}"
 SHOTS_FILTER="${SHOTS:-}"
-OUT="$REPO/docs/gallery.json"
+OUT="$REPO/app/gallery.json"
 
 mkdir -p "$REPO/app"
 WORK="$WORK_FILTER" SHOTS="$SHOTS_FILTER" SRC="$REPO/results" DST="$OUT" python3 - <<'PYEOF'

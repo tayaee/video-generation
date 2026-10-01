@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# docs/serve.sh: 갤러리 서빙 (A 방식: Codespace 로컬 파일).
-#   ./docs/serve.sh                 # 03번샷 pull + manifest + :8001 서빙
-#   SHOTS=03,04 ./docs/serve.sh     # 추가 샷 포함
-#   PORT=8001 ./docs/serve.sh
+# app/serve.sh: 갤러리 서빙 (A 방식: Codespace 로컬 파일).
+#   ./app/serve.sh                 # 03번샷 pull + manifest + :8001 서빙
+#   SHOTS=03,04 ./app/serve.sh     # 추가 샷 포함
+#   PORT=8001 ./app/serve.sh
 # Codespace는 리포 루트에서 :8001을 서빙. sleep/wake에 파일 유지, 재생성시에만 pull.
 set -euo pipefail
 
@@ -24,5 +24,5 @@ echo "== manifest =="
 SHOTS="$SHOTS" WORK=matchgirl ./scripts/common/gen-manifest.sh
 
 echo "== serve :$PORT (root=$REPO) =="
-echo "open: http://localhost:$PORT/docs/ (codespace면 forwarded URL + /docs/)"
+echo "open: http://localhost:$PORT/app/ (codespace면 forwarded URL + /app/)"
 exec python3 -m http.server "$PORT" --bind 0.0.0.0
