@@ -4,8 +4,8 @@
 set -euo pipefail
 
 H3_PORT="${H3_PORT:-8000}"
-# 양산 결과는 /rosenas/data/AIML/comfyui/results/<slug>/ 에 저장 (빈값이면 로컬).
-RESULTS_ROOT="${RESULTS_ROOT-/rosenas/data/AIML/comfyui/results}"
+# 양산 결과는 /rosenas/data/AIML/video-generation/results/<slug>/ 에 저장 (빈값이면 로컬).
+RESULTS_ROOT="${RESULTS_ROOT-/rosenas/data/AIML/video-generation/results}"
 if [ -n "$RESULTS_ROOT" ]; then OUTDIR="$RESULTS_ROOT/smoke";
 else OUTDIR="$(dirname "$0")/outputs"; fi
 mkdir -p "$OUTDIR"

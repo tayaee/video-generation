@@ -68,8 +68,8 @@ done
 
 echo "== 산출물 ($DATA_ROOT/output) =="
 ls -lht "$DATA_ROOT/output" | head -10
-# 양산 결과는 /rosenas/data/AIML/comfyui/results/<slug>/ 에 저장 (빈값이면 복사 생략).
-RESULTS_ROOT="${RESULTS_ROOT-/rosenas/data/AIML/comfyui/results}"
+# 양산 결과는 /rosenas/data/AIML/video-generation/results/<slug>/ 에 저장 (빈값이면 복사 생략).
+RESULTS_ROOT="${RESULTS_ROOT-/rosenas/data/AIML/video-generation/results}"
 if [ -n "$RESULTS_ROOT" ]; then
   SLUG="${SLUG:-$(basename "$WF" .json)}"
   DEST="$RESULTS_ROOT/$SLUG"
