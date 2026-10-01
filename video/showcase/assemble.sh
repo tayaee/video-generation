@@ -13,6 +13,9 @@ INDIR="${1:-$REPO/results/$SHOWCASE_SLUG/profiles/$QUALITY_PROFILE/shots}"
 OUT="${2:-$REPO/results/$SHOWCASE_SLUG/profiles/$QUALITY_PROFILE/$SHOWCASE_SLUG.mp4}"
 EXPECT="${EXPECT:-288}"
 EXPECT_SHOTS="${EXPECT_SHOTS:-36}"
+# 공통 미러: 본편을 NAS Secondary로 복사 (NAS 없으면 조용히 무시).
+[ -f "$REPO/mirror-results.sh" ] && . "$REPO/mirror-results.sh" || true
+command -v mirror_results >/dev/null 2>&1 || mirror_results() { :; }
 LIST="$INDIR/.concat.txt"
 mkdir -p "$(dirname "$OUT")"
 [ -w "$(dirname "$OUT")" ] || { echo "FAIL: 쓰기 불가: $(dirname "$OUT")"; exit 1; }
@@ -31,6 +34,7 @@ echo "== concat ${#CLIPS[@]} clips -> $OUT =="
 
 echo "== 검증 =="
 ls -lh "$OUT"
+mirror_results  # 본편 미러
 ffprobe -v error -show_entries stream=index,codec_name,width,height,r_frame_rate,sample_rate,channels \
   -of default=noprint_wrappers=1 "$OUT"
 GOT=$(ffprobe -v error -show_entries format=duration \

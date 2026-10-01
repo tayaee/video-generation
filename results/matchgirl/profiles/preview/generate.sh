@@ -99,7 +99,79 @@ mkdir -p "$OUTDIR"
 [ -w "$OUTDIR" ] || { echo "FAIL: 쓰기 불가: $OUTDIR (sudo mkdir -p $OUTDIR && sudo chown -R $(whoami) $OUTDIR)"; exit 1; }
 [ -f "$TIMINGS" ] || echo "shot,id,steps,dur_s,e2e_s" > "$TIMINGS"
 
+# 서버 모델명 캐시 (sidecar용, 실패 시 unknown).
+H3_MODEL="$(curl -s -m 5 "http://127.0.0.1:$H3_PORT/v1/models" 2>/dev/null \
+  | python3 -c 'import json,sys; print(json.load(sys.stdin)["data"][0]["id"])' 2>/dev/null || echo unknown)"
+
+write_sidecar() { # out task e2e prompt seed — 생성 직후 <stem>.json 기록
+  local out="$1" task="$2" e2e="$3" prompt="$4" seed="$5"
+  SC_OUT="$out" SC_TASK="$task" SC_E2E="$e2e" SC_PROMPT="$prompt" SC_SEED="$seed" \
+  SC_URL="http://127.0.0.1:$H3_PORT" SC_MODEL="$H3_MODEL" SC_MODE="$MODE" \
+  SC_PROFILE="$(basename "$(cd "$BASEDIR" && pwd)")" SC_STEPS="$STEPS" SC_DUR="$DUR" \
+  SC_HOST="$(hostname 2>/dev/null || echo unknown)" \
+  SC_GPU="$(nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo unknown)" \
+  SC_GIT="$(git -C "$BASEDIR" rev-parse --short HEAD 2>/dev/null || echo unknown)" \
+  SC_DATE="$(date -u +%FT%TZ)" \
+  python3 - <<'PYEOF'
+import json, os, subprocess
+out = os.environ["SC_OUT"]
+side = out[:-4] + ".json" if out.endswith(".mp4") else out + ".json"
+try:
+    probed = float(subprocess.check_output(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=noprint_wrappers=1:nokey=1", out],
+        text=True).strip())
+except Exception:
+    probed = 0.0
+try:
+    size = os.path.getsize(out)
+except OSError:
+    size = 0
+e2e = float(os.environ["SC_E2E"] or 0)
+steps = int(os.environ["SC_STEPS"])
+dur = float(os.environ["SC_DUR"])
+doc = {
+    "file": os.path.basename(out),
+    "created_at_utc": os.environ["SC_DATE"],
+    "environment": {
+        "host": os.environ["SC_HOST"],
+        "gpu": os.environ["SC_GPU"],
+        "git_rev": os.environ["SC_GIT"],
+        "server_url": os.environ["SC_URL"],
+        "server_model": os.environ["SC_MODEL"],
+        "script_profile": os.environ["SC_PROFILE"],
+    },
+    "method": {
+        "endpoint": "POST /v1/videos/sync",
+        "mode": os.environ["SC_MODE"],
+        "task": os.environ["SC_TASK"],
+        "params": {
+            "width": 960, "height": 576, "fps": 24,
+            "num_inference_steps": steps, "flow_shift": 12,
+            "seed": int(os.environ["SC_SEED"]),
+            "duration": dur, "audio_flow_shift": 3.0,
+        },
+        "prompt": os.environ["SC_PROMPT"],
+    },
+    "speed": {
+        "e2e_s": round(e2e, 3),
+        "video_dur_s": round(probed, 3),
+        "mp4_bytes": size,
+        "sec_per_step": round(e2e / steps, 3) if steps else 0,
+        "realtime_factor": round(e2e / dur, 2) if dur else 0,
+    },
+}
+with open(side, "w") as f:
+    json.dump(doc, f, ensure_ascii=False, indent=2)
+print(f"sidecar: {side}")
+PYEOF
+}
+
 n=0
+# 공통 미러: results/ 산출물을 NAS Secondary로 복사 (NAS 없으면 조용히 무시).
+MIRROR_LIB="$(cd "$BASEDIR/../../../.." && pwd)/mirror-results.sh"
+[ -f "$MIRROR_LIB" ] && . "$MIRROR_LIB" || true
+command -v mirror_results >/dev/null 2>&1 || mirror_results() { :; }
 for entry in "${SHOTS[@]}"; do
   n=$((n+1))
   id="${entry%%|*}"
@@ -111,6 +183,7 @@ for entry in "${SHOTS[@]}"; do
   else
     echo "===== [$n/${#SHOTS[@]}] $id (${DUR}s, $STEPS steps, mode=$MODE) ====="
     if [ "$MODE" = "chain" ] && [ "$n" -gt 1 ] && [ -f "$FRAME" ]; then
+      TASK="ref2va"
       E2E=$(set -x; curl --fail-with-body -sS -X POST "http://127.0.0.1:$H3_PORT/v1/videos/sync" \
         --max-time 14400 \
         -F "input_reference=@${FRAME};type=image/jpeg" \
@@ -120,6 +193,7 @@ for entry in "${SHOTS[@]}"; do
         -F "extra_params={\"task\":\"ref2va\",\"duration\":$DUR,\"audio_flow_shift\":3.0}" \
         -o "$out" -w '%{time_total}')
     else
+      TASK="t2va"
       E2E=$(set -x; curl --fail-with-body -sS -X POST "http://127.0.0.1:$H3_PORT/v1/videos/sync" \
         -F "prompt=${prompt}" \
         -F 'width=960' -F 'height=576' -F 'aspect_ratio=16:9' \
@@ -129,6 +203,8 @@ for entry in "${SHOTS[@]}"; do
     fi
     echo "$n,$id,$STEPS,$DUR,$E2E" >> "$TIMINGS"
     ls -lh "$out"
+    write_sidecar "$out" "$TASK" "$E2E" "$prompt" "$seed"
+    mirror_results
   fi
   dur_ok "$out" || { echo "FAIL: 길이 이상: $out"; exit 1; }
   if [ "$MODE" = "chain" ]; then
@@ -137,6 +213,7 @@ for entry in "${SHOTS[@]}"; do
 done
 
 echo "== 합산 검증 =="
+mirror_results  # 최종 미러 (샷별 미러 누락분 대비)
 TOTAL=$(for f in "$OUTDIR"/*.mp4; do
   ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$f"
 done | awk '{s+=$1} END{printf "%.1f", s}')
