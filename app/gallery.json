@@ -1409,6 +1409,24 @@
        "e2e_s": 3022.633,
        "steps": 50,
        "prompt": "Photorealistic snowy morning street, two carriages thunder past. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stumbles in oversized slippers, one flies off and a running boy snatches it up laughing, gone around the corner. Handheld panic. Horse hooves, wheel rattle, boy laughter fading, her small cry in Korean, 내 신발!"
+      },
+      {
+       "n": "03",
+       "id": "dusk_street",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/03_dusk_street_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1596.804,
+       "steps": 50,
+       "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+      },
+      {
+       "n": "04",
+       "id": "barefoot_snow",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/04_barefoot_snow_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1604.263,
+       "steps": 50,
+       "prompt": "Photorealistic close-up on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, small bare feet stepping into fresh snow, toes red with cold. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes hurries past shuttered shops. Handheld follow. Snow crunch, ragged breathing, a far-off children's choir rehearsing a carol in Korean, wind gusts."
       }
      ],
      "meta": {
@@ -1425,9 +1443,9 @@
       "ladder_order": 5
      },
      "stats": {
-      "shot_count": 2,
-      "avg_e2e_s": 2333.2,
-      "min_e2e_s": 1643.8,
+      "shot_count": 4,
+      "avg_e2e_s": 1966.9,
+      "min_e2e_s": 1596.8,
       "max_e2e_s": 3022.6
      }
     }
