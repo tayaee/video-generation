@@ -1,0 +1,49 @@
+{
+  "file": "11_warm_hands_turbo.mp4",
+  "created_at_utc": "2026-10-01T12:48:20Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (turbo_8step LoRA)",
+    "script_profile": "turbo",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "turbo",
+    "task": "t2v-turbo",
+    "params": {
+      "width": 608,
+      "height": 352,
+      "length_frames": 124,
+      "steps": 8,
+      "seed": 1112,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic close-up inside the vision, her small red hands open before the glowing stove grate, frost melting off her fingertips into steam. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes sighs with relief. Extreme macro. Steam hiss, soft relieved sigh in Korean, 따뜻해."
+  },
+  "speed": {
+    "e2e_s": 81.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 501588,
+    "sec_per_step": 10.125,
+    "realtime_factor": 16.2
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109789,
+      "available": 14818
+    },
+    "memory_after_mb": {
+      "used": 109795,
+      "available": 14812
+    },
+    "swap_used_before_mb": 8034,
+    "swap_used_after_mb": 8034,
+    "gpu_temp_c": {
+      "before": 50,
+      "after": 50
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

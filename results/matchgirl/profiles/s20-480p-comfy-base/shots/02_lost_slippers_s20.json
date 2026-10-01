@@ -1,0 +1,49 @@
+{
+  "file": "02_lost_slippers_s20.mp4",
+  "created_at_utc": "2026-10-01T13:34:32Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (base 20-step)",
+    "script_profile": "s20-480p-comfy-base",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "base",
+    "task": "t2v-base",
+    "params": {
+      "width": 864,
+      "height": 480,
+      "length_frames": 124,
+      "steps": 20,
+      "seed": 1103,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic snowy morning street, two carriages thunder past. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stumbles in oversized slippers, one flies off and a running boy snatches it up laughing, gone around the corner. Handheld panic. Horse hooves, wheel rattle, boy laughter fading, her small cry in Korean, 내 신발!"
+  },
+  "speed": {
+    "e2e_s": 300.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 1130386,
+    "sec_per_step": 15.0,
+    "realtime_factor": 60.0
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109800,
+      "available": 14807
+    },
+    "memory_after_mb": {
+      "used": 109858,
+      "available": 14749
+    },
+    "swap_used_before_mb": 8034,
+    "swap_used_after_mb": 8034,
+    "gpu_temp_c": {
+      "before": 50,
+      "after": 50
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

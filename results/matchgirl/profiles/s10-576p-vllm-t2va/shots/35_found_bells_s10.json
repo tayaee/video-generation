@@ -1,0 +1,51 @@
+{
+  "file": "35_found_bells_s10.mp4",
+  "created_at_utc": "2026-10-01T11:59:59Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "318572b",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s10-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 10,
+      "flow_shift": 12,
+      "seed": 1136,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic, the same cold dawn, moments later, morning passersby gather and kneel around her in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, a woman covers her with a shawl, church bells ring the New Year. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes is found smiling. Rising crane. Church bells, murmuring crowd, a woman's soft sob in Korean, 불쌍해서 어째."
+  },
+  "speed": {
+    "e2e_s": 347.413,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 3517987,
+    "sec_per_step": 34.741,
+    "realtime_factor": 69.48
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109633,
+      "available": 14974
+    },
+    "memory_after_mb": {
+      "used": 109576,
+      "available": 15031
+    },
+    "swap_used_before_mb": 8034,
+    "swap_used_after_mb": 8034,
+    "gpu_temp_c": {
+      "before": 65,
+      "after": 65
+    }
+  }
+}

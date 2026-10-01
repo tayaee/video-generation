@@ -1,0 +1,51 @@
+{
+  "file": "29_grandmother_s10.mp4",
+  "created_at_utc": "2026-10-01T11:25:14Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "318572b",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s10-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 10,
+      "flow_shift": 12,
+      "seed": 1130,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic radiant vision, her grandmother appears in warm light, arms open, kindest face, murmuring in Korean, 이제 따뜻할 거야. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes runs into the embrace. Slow motion. Soft Korean murmur and humming lullaby, warmest room tone, faint Korean choir."
+  },
+  "speed": {
+    "e2e_s": 339.342,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 3001411,
+    "sec_per_step": 33.934,
+    "realtime_factor": 67.87
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109438,
+      "available": 15169
+    },
+    "memory_after_mb": {
+      "used": 109304,
+      "available": 15303
+    },
+    "swap_used_before_mb": 7998,
+    "swap_used_after_mb": 8008,
+    "gpu_temp_c": {
+      "before": 65,
+      "after": 65
+    }
+  }
+}

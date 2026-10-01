@@ -1,0 +1,49 @@
+{
+  "file": "32_among_stars_s20.mp4",
+  "created_at_utc": "2026-10-01T16:04:55Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (base 20-step)",
+    "script_profile": "s20-480p-comfy-base",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "base",
+    "task": "t2v-base",
+    "params": {
+      "width": 864,
+      "height": 480,
+      "length_frames": 124,
+      "steps": 20,
+      "seed": 1133,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic, the grandmother and a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes drift among gentle stars, the child asleep on her shoulder, utterly at peace. Weightless drift. Choir dissolving to silence, one soft bell."
+  },
+  "speed": {
+    "e2e_s": 300.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 598071,
+    "sec_per_step": 15.0,
+    "realtime_factor": 60.0
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109749,
+      "available": 14858
+    },
+    "memory_after_mb": {
+      "used": 109783,
+      "available": 14824
+    },
+    "swap_used_before_mb": 8214,
+    "swap_used_after_mb": 8213,
+    "gpu_temp_c": {
+      "before": 49,
+      "after": 50
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

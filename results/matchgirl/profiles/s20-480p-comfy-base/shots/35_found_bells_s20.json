@@ -1,0 +1,49 @@
+{
+  "file": "35_found_bells_s20.mp4",
+  "created_at_utc": "2026-10-01T16:19:58Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (base 20-step)",
+    "script_profile": "s20-480p-comfy-base",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "base",
+    "task": "t2v-base",
+    "params": {
+      "width": 864,
+      "height": 480,
+      "length_frames": 124,
+      "steps": 20,
+      "seed": 1136,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic, the same cold dawn, moments later, morning passersby gather and kneel around her in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, a woman covers her with a shawl, church bells ring the New Year. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes is found smiling. Rising crane. Church bells, murmuring crowd, a woman's soft sob in Korean, 불쌍해서 어째."
+  },
+  "speed": {
+    "e2e_s": 301.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 367752,
+    "sec_per_step": 15.05,
+    "realtime_factor": 60.2
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109749,
+      "available": 14858
+    },
+    "memory_after_mb": {
+      "used": 109725,
+      "available": 14882
+    },
+    "swap_used_before_mb": 8213,
+    "swap_used_after_mb": 8213,
+    "gpu_temp_c": {
+      "before": 49,
+      "after": 49
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

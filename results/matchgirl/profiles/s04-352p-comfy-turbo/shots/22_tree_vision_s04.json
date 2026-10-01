@@ -1,0 +1,49 @@
+{
+  "file": "22_tree_vision_s04.mp4",
+  "created_at_utc": "2026-10-01T12:22:30Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (turbo_8step LoRA)",
+    "script_profile": "s04-352p-comfy-turbo",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "turbo",
+    "task": "t2v-turbo",
+    "params": {
+      "width": 608,
+      "height": 352,
+      "length_frames": 124,
+      "steps": 4,
+      "seed": 1123,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic dream vision, a towering Christmas tree covered in lit candles and painted ornaments. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches up in wonder. Slow tilt up. Soft Korean choir, candle sizzle, ornament glass chimes."
+  },
+  "speed": {
+    "e2e_s": 40.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 855647,
+    "sec_per_step": 10.0,
+    "realtime_factor": 8.0
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109748,
+      "available": 14859
+    },
+    "memory_after_mb": {
+      "used": 109743,
+      "available": 14864
+    },
+    "swap_used_before_mb": 8034,
+    "swap_used_after_mb": 8034,
+    "gpu_temp_c": {
+      "before": 51,
+      "after": 51
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

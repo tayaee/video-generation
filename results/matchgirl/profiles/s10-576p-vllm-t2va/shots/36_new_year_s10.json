@@ -1,0 +1,51 @@
+{
+  "file": "36_new_year_s10.mp4",
+  "created_at_utc": "2026-10-01T12:05:43Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "318572b",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s10-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 10,
+      "flow_shift": 12,
+      "seed": 1137,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic New Year morning wide on the same cobblestone street at cold blue dawn, thin snow over everything, pale morning light, the same cold dawn, moments later, sun breaks over snowy rooftops, children run laughing with new toys past the quiet alley, light blooming over the town. Slow pull-back to sky. Children laughter, morning bells, birdsong, thaw dripping into the new year."
+  },
+  "speed": {
+    "e2e_s": 344.096,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 4664055,
+    "sec_per_step": 34.41,
+    "realtime_factor": 68.82
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109648,
+      "available": 14959
+    },
+    "memory_after_mb": {
+      "used": 109578,
+      "available": 15029
+    },
+    "swap_used_before_mb": 8034,
+    "swap_used_after_mb": 8034,
+    "gpu_temp_c": {
+      "before": 65,
+      "after": 67
+    }
+  }
+}

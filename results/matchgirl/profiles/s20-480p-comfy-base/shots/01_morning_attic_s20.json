@@ -1,0 +1,49 @@
+{
+  "file": "01_morning_attic_s20.mp4",
+  "created_at_utc": "2026-10-01T13:29:31Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (base 20-step)",
+    "script_profile": "s20-480p-comfy-base",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "base",
+    "task": "t2v-base",
+    "params": {
+      "width": 864,
+      "height": 480,
+      "length_frames": 124,
+      "steps": 20,
+      "seed": 1102,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic the same small attic room at dawn, frost on the inside of the window. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes wraps a thin shawl, tucks the match bundle inside her coat, and steps out into the cold morning. Slow pull-back. Floorboard creaks, thin blanket rustle, distant rooster, cold wind under the door."
+  },
+  "speed": {
+    "e2e_s": 360.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 629249,
+    "sec_per_step": 18.0,
+    "realtime_factor": 72.0
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109767,
+      "available": 14840
+    },
+    "memory_after_mb": {
+      "used": 109805,
+      "available": 14802
+    },
+    "swap_used_before_mb": 8034,
+    "swap_used_after_mb": 8034,
+    "gpu_temp_c": {
+      "before": 50,
+      "after": 50
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

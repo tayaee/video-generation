@@ -1,0 +1,49 @@
+{
+  "file": "18_dark_again_s04.mp4",
+  "created_at_utc": "2026-10-01T12:19:49Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (turbo_8step LoRA)",
+    "script_profile": "s04-352p-comfy-turbo",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "turbo",
+    "task": "t2v-turbo",
+    "params": {
+      "width": 608,
+      "height": 352,
+      "length_frames": 124,
+      "steps": 4,
+      "seed": 1119,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic, the vision snaps to the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, snow falling harder. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes alone again under the street lamp. Crane up. Cutoff of music, heavy snowfall hush, distant midnight bells."
+  },
+  "speed": {
+    "e2e_s": 40.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 382738,
+    "sec_per_step": 10.0,
+    "realtime_factor": 8.0
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109774,
+      "available": 14833
+    },
+    "memory_after_mb": {
+      "used": 109840,
+      "available": 14767
+    },
+    "swap_used_before_mb": 8034,
+    "swap_used_after_mb": 8034,
+    "gpu_temp_c": {
+      "before": 51,
+      "after": 51
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

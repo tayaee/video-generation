@@ -1,0 +1,49 @@
+{
+  "file": "06_rich_family_s20.mp4",
+  "created_at_utc": "2026-10-01T13:54:35Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (base 20-step)",
+    "script_profile": "s20-480p-comfy-base",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "base",
+    "task": "t2v-base",
+    "params": {
+      "width": 864,
+      "height": 480,
+      "length_frames": 124,
+      "steps": 20,
+      "seed": 1107,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, a wealthy family in furs hurries past with parcels and a toy horse. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches out her matches, the mother pulls her child away without a glance. Slow motion pass. Muffled rich laughter, sleigh bells, her whisper in Korean, 하나만 사주세요."
+  },
+  "speed": {
+    "e2e_s": 300.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 822708,
+    "sec_per_step": 15.0,
+    "realtime_factor": 60.0
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109837,
+      "available": 14770
+    },
+    "memory_after_mb": {
+      "used": 109900,
+      "available": 14706
+    },
+    "swap_used_before_mb": 8032,
+    "swap_used_after_mb": 8032,
+    "gpu_temp_c": {
+      "before": 50,
+      "after": 50
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

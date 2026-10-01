@@ -1,0 +1,49 @@
+{
+  "file": "16_goose_rises_s20.mp4",
+  "created_at_utc": "2026-10-01T14:44:43Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (base 20-step)",
+    "script_profile": "s20-480p-comfy-base",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "base",
+    "task": "t2v-base",
+    "params": {
+      "width": 864,
+      "height": 480,
+      "length_frames": 124,
+      "steps": 20,
+      "seed": 1117,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic dream logic, the roast goose rises with knife and fork in its breast and waddles toward the poor child. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes laughs in delight. Gentle tracking. Playful sizzle, soft child laughter, music-box notes."
+  },
+  "speed": {
+    "e2e_s": 301.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 1174441,
+    "sec_per_step": 15.05,
+    "realtime_factor": 60.2
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109920,
+      "available": 14687
+    },
+    "memory_after_mb": {
+      "used": 109983,
+      "available": 14624
+    },
+    "swap_used_before_mb": 8032,
+    "swap_used_after_mb": 8060,
+    "gpu_temp_c": {
+      "before": 50,
+      "after": 51
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

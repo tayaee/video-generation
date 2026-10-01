@@ -1,0 +1,49 @@
+{
+  "file": "04_barefoot_snow_s04.mp4",
+  "created_at_utc": "2026-10-01T12:10:24Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (turbo_8step LoRA)",
+    "script_profile": "s04-352p-comfy-turbo",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "turbo",
+    "task": "t2v-turbo",
+    "params": {
+      "width": 608,
+      "height": 352,
+      "length_frames": 124,
+      "steps": 4,
+      "seed": 1105,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic close-up on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, small bare feet stepping into fresh snow, toes red with cold. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes hurries past shuttered shops. Handheld follow. Snow crunch, ragged breathing, a far-off children's choir rehearsing a carol in Korean, wind gusts."
+  },
+  "speed": {
+    "e2e_s": 40.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 868627,
+    "sec_per_step": 10.0,
+    "realtime_factor": 8.0
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109743,
+      "available": 14864
+    },
+    "memory_after_mb": {
+      "used": 109796,
+      "available": 14811
+    },
+    "swap_used_before_mb": 8034,
+    "swap_used_after_mb": 8034,
+    "gpu_temp_c": {
+      "before": 55,
+      "after": 54
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}

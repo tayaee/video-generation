@@ -1,0 +1,51 @@
+{
+  "file": "32_among_stars_s10.mp4",
+  "created_at_utc": "2026-10-01T11:42:21Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "318572b",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s10-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 10,
+      "flow_shift": 12,
+      "seed": 1133,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic, the grandmother and a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes drift among gentle stars, the child asleep on her shoulder, utterly at peace. Weightless drift. Choir dissolving to silence, one soft bell."
+  },
+  "speed": {
+    "e2e_s": 342.171,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 4158019,
+    "sec_per_step": 34.217,
+    "realtime_factor": 68.43
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109279,
+      "available": 15328
+    },
+    "memory_after_mb": {
+      "used": 109655,
+      "available": 14952
+    },
+    "swap_used_before_mb": 8033,
+    "swap_used_after_mb": 8034,
+    "gpu_temp_c": {
+      "before": 65,
+      "after": 67
+    }
+  }
+}

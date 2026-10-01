@@ -1,0 +1,49 @@
+{
+  "file": "19_blizzard_s20.mp4",
+  "created_at_utc": "2026-10-01T14:59:45Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (base 20-step)",
+    "script_profile": "s20-480p-comfy-base",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "base",
+    "task": "t2v-base",
+    "params": {
+      "width": 864,
+      "height": 480,
+      "length_frames": 124,
+      "steps": 20,
+      "seed": 1120,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic whiteout gust through the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes staggers, shields the bundle inside her coat, snow plastering her reddish-gold hair. Low angle struggle. Blizzard roar, coat flapping, her strained breath."
+  },
+  "speed": {
+    "e2e_s": 300.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 652383,
+    "sec_per_step": 15.0,
+    "realtime_factor": 60.0
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109919,
+      "available": 14688
+    },
+    "memory_after_mb": {
+      "used": 109906,
+      "available": 14701
+    },
+    "swap_used_before_mb": 8061,
+    "swap_used_after_mb": 8061,
+    "gpu_temp_c": {
+      "before": 50,
+      "after": 50
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}
