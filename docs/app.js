@@ -93,8 +93,7 @@ function cellEl(s) {
   // 절대 URL base(Releases 등)는 에셋이 flat하므로 basename만 붙임
   v.src = (/^https?:\/\//.test(base) ? base + s.mp4.split("/").pop() : base + s.mp4);
   v.preload = "metadata";
-  v.muted = true;
-  v.playsInline = true;
+  v.playsInline = true;   // muted 불필요: 클릭 제스처 재생이라 오디오 허용됨
   v.title = (s.id || "") + "\n" + (s.prompt || "");
   v.onclick = () => toggle(v, st);
   const meta = document.createElement("div");
