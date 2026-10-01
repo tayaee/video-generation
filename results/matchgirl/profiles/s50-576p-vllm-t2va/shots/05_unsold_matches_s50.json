@@ -1,0 +1,51 @@
+{
+  "file": "05_unsold_matches_s50.mp4",
+  "created_at_utc": "2026-10-01T19:08:17Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "0cb0c8e",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s50-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 50,
+      "flow_shift": 12,
+      "seed": 1106,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic street level on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, frost-covered bundle of matchboxes in small hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds them up to hurrying passersby legs, no one stops. Static then slight tilt down. Muffled footsteps fading, coins clinking elsewhere, sighing wind."
+  },
+  "speed": {
+    "e2e_s": 1603.589,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 4303451,
+    "sec_per_step": 32.072,
+    "realtime_factor": 320.72
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109263,
+      "available": 15344
+    },
+    "memory_after_mb": {
+      "used": 109253,
+      "available": 15354
+    },
+    "swap_used_before_mb": 7576,
+    "swap_used_after_mb": 7580,
+    "gpu_temp_c": {
+      "before": 65,
+      "after": 64
+    }
+  }
+}

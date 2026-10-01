@@ -21,7 +21,7 @@ done
 (git lfs pull -I "$PAT" 2>&1 || echo "(lfs pull 스킵/불필요)") | head -n 5 || true
 
 echo "== manifest =="
-SHOTS="$SHOTS" WORK=matchgirl ./scripts/common/gen-manifest.sh
+SHOTS="$SHOTS" WORK=matchgirl ./scripts/common/update-gallery.json.sh
 
 echo "== serve :$PORT (root=$REPO) =="
 echo "open: http://localhost:$PORT/app/ (codespace면 forwarded URL + /app/)"

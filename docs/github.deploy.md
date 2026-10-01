@@ -14,9 +14,9 @@ app/                  # 배포 단위 (이 폴더 통째로 Pages 아티팩트)
   styles.css
   app.js              # 렌더·인플레이스 재생 (GALLERY_BASE 참조)
   config.js           # ★ 비디오 base URL (아래 참조)
-  gallery.json        # 생성물 (gen-manifest.sh가 생성, 직접 편집 금지)
+  gallery.json        # 생성물 (update-gallery.json.sh가 생성, 직접 편집 금지)
   serve.sh            # 로컬/Codespaces 서빙
-scripts/common/gen-manifest.sh   # results/ 스캔 → app/gallery.json
+scripts/common/update-gallery.json.sh   # results/ 스캔 → app/gallery.json
 .github/workflows/deploy.yml    # 배포 워크플로우
 ```
 
@@ -51,7 +51,7 @@ scripts/common/gen-manifest.sh   # results/ 스캔 → app/gallery.json
 gh release upload gallery results/matchgirl/profiles/*/shots/11_*.mp4
 
 # 2) manifest 재생성 (SHOTS에 추가)
-SHOTS=01,02,03,04,05,06,07,08,09,10,11 WORK=matchgirl ./scripts/common/gen-manifest.sh
+SHOTS=01,02,03,04,05,06,07,08,09,10,11 WORK=matchgirl ./scripts/common/update-gallery.json.sh
 
 # 3) 스트리밍 확인 후 푸시 (app/** 변경이 배포 트리거)
 git add app/gallery.json && git commit -m "docs: gallery adds shot 11" && git push origin main

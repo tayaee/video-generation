@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# scripts/common/gen-manifest.sh: results/ 아래 산출물 스캔 → app/gallery.json 생성.
-#   ./gen-manifest.sh                    # 전체 work·전체 샷
-#   WORK=matchgirl ./gen-manifest.sh     # 특정 work만
-#   SHOTS=03 ./gen-manifest.sh           # 특정 샷만 (콤마 구분: SHOTS=03,04,05)
+# scripts/common/update-gallery.json.sh: results/ 아래 산출물 스캔 → app/gallery.json 생성.
+#   ./update-gallery.json.sh                    # 전체 work·전체 샷
+#   WORK=matchgirl ./update-gallery.json.sh     # 특정 work만
+#   SHOTS=03 ./update-gallery.json.sh           # 특정 샷만 (콤마 구분: SHOTS=03,04,05)
 # sidecar(<stem>.json)에서 dur/e2e/prompt를 읽어 함께 넣는다.
 set -euo pipefail
 
