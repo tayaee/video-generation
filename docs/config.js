@@ -5,4 +5,4 @@
  *   var GALLERY_BASE = "https://github.com/<user>/<repo>/releases/download/gallery/";
  *   (끝 슬래시 필수. gallery.json의 mp4 상대경로 뒤에 붙음)
  */
-var GALLERY_BASE = "../";
+var GALLERY_BASE = "https://github.com/tayaee/video-generation/releases/download/gallery/";

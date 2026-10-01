@@ -89,7 +89,9 @@ function esc(s) {
 function cellEl(s) {
   const wrap = document.createElement("div");
   const v = document.createElement("video");
-  v.src = (typeof GALLERY_BASE !== "undefined" ? GALLERY_BASE : "../") + s.mp4;
+  const base = (typeof GALLERY_BASE !== "undefined" ? GALLERY_BASE : "../");
+  // 절대 URL base(Releases 등)는 에셋이 flat하므로 basename만 붙임
+  v.src = (/^https?:\/\//.test(base) ? base + s.mp4.split("/").pop() : base + s.mp4);
   v.preload = "metadata";
   v.muted = true;
   v.playsInline = true;
