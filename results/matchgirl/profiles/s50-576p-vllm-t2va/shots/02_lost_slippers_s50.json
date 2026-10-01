@@ -1,0 +1,51 @@
+{
+  "file": "02_lost_slippers_s50.mp4",
+  "created_at_utc": "2026-10-01T17:48:11Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "0d05ca6",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s50-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 50,
+      "flow_shift": 12,
+      "seed": 1103,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic snowy morning street, two carriages thunder past. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stumbles in oversized slippers, one flies off and a running boy snatches it up laughing, gone around the corner. Handheld panic. Horse hooves, wheel rattle, boy laughter fading, her small cry in Korean, 내 신발!"
+  },
+  "speed": {
+    "e2e_s": 3022.633,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 5327008,
+    "sec_per_step": 60.453,
+    "realtime_factor": 604.53
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109411,
+      "available": 15196
+    },
+    "memory_after_mb": {
+      "used": 108983,
+      "available": 15624
+    },
+    "swap_used_before_mb": 8191,
+    "swap_used_after_mb": 7576,
+    "gpu_temp_c": {
+      "before": 69,
+      "after": 65
+    }
+  }
+}
