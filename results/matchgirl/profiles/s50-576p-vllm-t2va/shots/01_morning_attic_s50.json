@@ -1,0 +1,51 @@
+{
+  "file": "01_morning_attic_s50.mp4",
+  "created_at_utc": "2026-10-01T16:54:02Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "8dedb76",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s50-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 50,
+      "flow_shift": 12,
+      "seed": 1102,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic the same small attic room at dawn, frost on the inside of the window. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes wraps a thin shawl, tucks the match bundle inside her coat, and steps out into the cold morning. Slow pull-back. Floorboard creaks, thin blanket rustle, distant rooster, cold wind under the door."
+  },
+  "speed": {
+    "e2e_s": 1643.801,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 3488467,
+    "sec_per_step": 32.876,
+    "realtime_factor": 328.76
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109756,
+      "available": 14851
+    },
+    "memory_after_mb": {
+      "used": 109189,
+      "available": 15418
+    },
+    "swap_used_before_mb": 8213,
+    "swap_used_after_mb": 8191,
+    "gpu_temp_c": {
+      "before": 49,
+      "after": 65
+    }
+  }
+}

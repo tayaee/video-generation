@@ -53,9 +53,8 @@ count_mp4() { # $1=shotsdir → 개수 출력
 
 run_profile() { # name script server [env...] — 성공 시 0
   local name="$1" script="$2" server="$3"; shift 3
-  local dir shots Tries=3
-  dir="$(dirname "$script")"
-  shots="$dir/shots"
+  local shots="$REPO/results/matchgirl/profiles/$name/shots"
+  local Tries=3
   log "===== PROFILE $name 시작 ($script) ====="
   local attempt
   for attempt in 1 2 3; do
@@ -123,8 +122,8 @@ main() {
     want "$name" || { log "$name: 선택 제외, 스킵"; continue; }
     rc=0
     run_profile "$name" "$script" "$server" || rc=1
-    if [ "$(count_mp4 "$P/$name/shots")" -gt 0 ]; then
-      assemble_profile "$P/$name" "$tag" || rc=1
+    if [ "$(count_mp4 "$REPO/results/matchgirl/profiles/$name/shots")" -gt 0 ]; then
+      assemble_profile "$REPO/results/matchgirl/profiles/$name" "$tag" || rc=1
     else
       log "$name: 산출물 없음, assemble 생략"; rc=1
     fi

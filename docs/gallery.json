@@ -1,0 +1,60 @@
+{
+ "works": {
+  "matchgirl": {
+   "profiles": {
+    "s04-352p-comfy-turbo": {
+     "shots": [
+      {
+       "n": "03",
+       "id": "dusk_street",
+       "mp4": "results/matchgirl/profiles/s04-352p-comfy-turbo/shots/03_dusk_street_s04.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 40.0,
+       "steps": 4,
+       "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+      }
+     ]
+    },
+    "s08-352p-comfy-turbo": {
+     "shots": [
+      {
+       "n": "03",
+       "id": "dusk_street",
+       "mp4": "results/matchgirl/profiles/s08-352p-comfy-turbo/shots/03_dusk_street_turbo.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 80.0,
+       "steps": 8,
+       "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+      }
+     ]
+    },
+    "s10-576p-vllm-t2va": {
+     "shots": [
+      {
+       "n": "03",
+       "id": "dusk_street",
+       "mp4": "results/matchgirl/profiles/s10-576p-vllm-t2va/shots/03_dusk_street_s10.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 323.266,
+       "steps": 10,
+       "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+      }
+     ]
+    },
+    "s20-480p-comfy-base": {
+     "shots": [
+      {
+       "n": "03",
+       "id": "dusk_street",
+       "mp4": "results/matchgirl/profiles/s20-480p-comfy-base/shots/03_dusk_street_s20.mp4",
+       "dur_s": 5.167,
+       "e2e_s": 301.0,
+       "steps": 20,
+       "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+      }
+     ]
+    }
+   }
+  }
+ }
+}

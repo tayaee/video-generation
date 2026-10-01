@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>video-generation gallery</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>video-generation gallery</h1>
+  <nav id="works"></nav>
+  <div id="controls">
+    <button id="play-all" type="button">▶ 전체 재생</button>
+    <button id="pause-all" type="button">⏸ 전체 정지</button>
+    <span id="status"></span>
+  </div>
+</header>
+<main>
+  <div id="table-wrap">
+    <table id="grid">
+      <thead><tr id="head-row"><th>shot</th></tr></thead>
+      <tbody id="grid-body"></tbody>
+    </table>
+  </div>
+  <details id="help">
+    <summary>사용법</summary>
+    <p>상단 링크에서 work 선택. 행=샷 번호, 열=프로파일(저화질→고화질). 썸네일 클릭으로 재생/정지.
+    빈 셀은 미생성. 메타는 각 샷의 sidecar JSON에서 읽음.</p>
+  </details>
+</main>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
