@@ -1,0 +1,49 @@
+{
+  "file": "36_new_year_s20.mp4",
+  "created_at_utc": "2026-10-01T16:24:58Z",
+  "environment": {
+    "host": "spark1.local",
+    "server_url": "http://127.0.0.1:8188",
+    "server": "spark2 ComfyUI (base 20-step)",
+    "script_profile": "s20-480p-comfy-base",
+    "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  },
+  "method": {
+    "endpoint": "POST /prompt (ComfyUI API)",
+    "mode": "base",
+    "task": "t2v-base",
+    "params": {
+      "width": 864,
+      "height": 480,
+      "length_frames": 124,
+      "steps": 20,
+      "seed": 1137,
+      "duration": 5.0
+    },
+    "prompt": "Photorealistic New Year morning wide on the same cobblestone street at cold blue dawn, thin snow over everything, pale morning light, the same cold dawn, moments later, sun breaks over snowy rooftops, children run laughing with new toys past the quiet alley, light blooming over the town. Slow pull-back to sky. Children laughter, morning bells, birdsong, thaw dripping into the new year."
+  },
+  "speed": {
+    "e2e_s": 300.0,
+    "video_dur_s": 5.167,
+    "mp4_bytes": 667037,
+    "sec_per_step": 15.0,
+    "realtime_factor": 60.0
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109716,
+      "available": 14891
+    },
+    "memory_after_mb": {
+      "used": 109718,
+      "available": 14889
+    },
+    "swap_used_before_mb": 8213,
+    "swap_used_after_mb": 8213,
+    "gpu_temp_c": {
+      "before": 49,
+      "after": 49
+    },
+    "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2"
+  }
+}
