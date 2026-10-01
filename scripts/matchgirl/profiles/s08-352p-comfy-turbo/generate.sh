@@ -1,31 +1,32 @@
 #!/usr/bin/env bash
-# results/matchgirl/profiles/full/generate.sh: 단편 풀퀄 (36샷 x 5s = 180s, STEPS=50).
-# (preview 프로파일은 profiles/preview/generate.sh — STEPS=10. STEPS/DUR/MODE/COUNT env로 조정 가능)
-# DUR 기본값 5: 7s에서 HTTP 500 + 서버 사망 실측(2026-10-01)이라 안정구간 5초로 확정.
-# 15s는 서버 한계 초과로 사용 금지 (diffusion 워커를 멈추고 2시간 타임아웃으로만 죽음).
+# results/matchgirl/profiles/turbo/generate.sh: 단편 터보판 (36샷 x 5s = 180s, STEPS=8).
+# spark1에서 실행, spark2 ComfyUI(turbo_8step LoRA)에 API 큐잉. vLLM 직결이 아님.
+# (preview=STEPS=10 vLLM, full=STEPS=50 vLLM. STEPS/DUR/MODE/COUNT/RES env로 조정 가능)
 # 원작: 안데르센 '성냥팔이 소녀' 축약 (public domain). 실사(photoreal) 지정.
 # 5막 완결: 막1 새해 전날 거리 / 막2 첫 성냥·난로 / 막3 두 번째·거위 /
 #   막4 세 번째·트리 / 막5 마지막 다발·할머니·새해 아침.
-# 정합성 수단: 매 프롬프트에 캐릭터 바이블(GIRL) verbatim + MODE=chain 시
-#   이전 샷 끝프레임을 ref2va 레퍼런스로 (ref2va 서버 기동 시에만 유효).
-#   ./generate.sh            # t2va 프리뷰 (STEPS/DUR/MODE/COUNT env로 조정 가능)
-#   MODE=chain ./generate.sh # 정합성 우선 (ref2va 체이닝, 6-serve-ref2va.sh 서버 필요)
-#   LIST=1 ./generate.sh     # 샷 목록만 출력 (생성 안 함)
-#   COUNT=1 DUR=5 ./generate.sh # smoke: 첫 샷만 5초 (서빙 검증용)
+# 정합성 수단: 매 프롬프트에 캐릭터 바이블(GIRL)+장소 바이블+시간 앵커 verbatim.
+#   ./generate.sh                  # 36샷 터보판 (RES로 해상도 변경 가능)
+#   RES=864x480 ./generate.sh      # 고해상도 시도 (spark2 메모리 한계 주의)
+#   LIST=1 ./generate.sh           # 샷 목록만 출력 (생성 안 함, 템플릿 검증 포함)
+#   COUNT=1 ./generate.sh          # smoke: 첫 샷만 (서빙 검증용)
 # 존재하는 샷은 검증 후 스킵하므로 중단→재실행이 resume이 된다.
 set -euo pipefail
 
-H3_PORT="${H3_PORT:-8000}"
-STEPS="${STEPS:-50}"
+COMFY_URL="${COMFY_URL:-http://127.0.0.1:8188}"  # spark1 프록시 경유. 직통은 http://192.168.102.2:8188
+STEPS="${STEPS:-8}"                              # turbo LoRA 권장값. 변경 시 품질 보장 없음
 DUR="${DUR:-5}"
-MODE="${MODE:-t2va}"
+RES="${RES:-608x352}"                            # 검증됨. 864x480은 spark2 메모리 확인 후
 LIST="${LIST:-0}"
 COUNT="${COUNT:-0}"
+GEN_TIMEOUT="${GEN_TIMEOUT:-3600}"
 BASEDIR="$(dirname "$0")"
+REPO_ROOT="$(cd "$BASEDIR/../../../.." && pwd)"
 # 산출물은 프로파일 디렉토리 안 shots/ (리포 Primary, NAS는 sync-results.sh로 복사).
-OUTDIR="${OUTDIR:-$BASEDIR/shots}"
+OUTDIR="${OUTDIR:-$REPO_ROOT/results/matchgirl/profiles/s08-352p-comfy-turbo/shots}"
 TIMINGS="$OUTDIR/timings.csv"
-FRAME="$OUTDIR/.chain_last.jpg"
+# 워크플로우 템플릿 (API Format). 주입점: 15=프롬프트·해상도·길이, 19=시드, 24=파일명.
+TEMPLATE="${TEMPLATE:-$REPO_ROOT/scripts/showcase/t2v_first.json}"
 
 GIRL="a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes"
 # 장소 바이블 (같은 장면 고정용, verbatim 유지. 인물 바이블과 동일 기법).
@@ -85,6 +86,9 @@ SHOTS=(
 # COUNT>0이면 앞 N샷만 (smoke용). LIST·EXPECT·resume 로직이 자동 추종.
 [ "${COUNT:-0}" -gt 0 ] 2>/dev/null && SHOTS=("${SHOTS[@]:0:$COUNT}") || true
 
+W="${RES%x*}"; H="${RES#*x}"
+LENGTH=$((DUR * 24 + 4))  # 5s → 124프레임 (t2v_first 검증값)
+
 dur_ok() { # file
   local got
   got=$(ffprobe -v error -show_entries format=duration \
@@ -92,7 +96,7 @@ dur_ok() { # file
   awk -v d="$got" -v e="$DUR" 'BEGIN{exit !(d>=e-2 && d<=e+15)}'
 }
 
-mem_snapshot() { # "used_MB available_MB swap_used_MB" 출력
+mem_snapshot() { # "used_MB available_MB swap_used_MB" 출력 (클라이언트 기준)
   awk '/^MemTotal:/{t=$2} /^MemAvailable:/{a=$2} /^SwapTotal:/{st=$2} /^SwapFree:/{sf=$2} \
     END{printf "%d %d %d", (t-a)/1024, a/1024, (st-sf)/1024}' /proc/meminfo 2>/dev/null || echo "0 0 0"
 }
@@ -101,34 +105,112 @@ gpu_temp() { # GPU 온도(℃) 출력, 실패 시 unknown
   nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader 2>/dev/null | head -1 | tr -d ' \n' || echo unknown
 }
 
+# 템플릿 노드 검증 (주입점 15/19/24). LIST 모드에서도 수행.
+TEMPLATE_OK="$(TEMPLATE="$TEMPLATE" python3 - <<'PYEOF' 2>&1 || echo "TEMPLATE_FAIL"
+import json, os, sys
+try:
+    d = json.load(open(os.environ["TEMPLATE"]))
+    assert d["15"]["class_type"] == "MiniMaxH3ImageToVideo", "node 15 class mismatch"
+    assert d["19"]["class_type"] == "RandomNoise", "node 19 class mismatch"
+    assert d["24"]["class_type"] == "SaveVideo", "node 24 class mismatch"
+    print("TEMPLATE_OK")
+except Exception as e:
+    print(f"TEMPLATE_FAIL: {e}")
+PYEOF
+)"
+echo "$TEMPLATE_OK" | grep -q "^TEMPLATE_OK$" \
+  || { echo "FAIL: 워크플로우 템플릿 이상: $TEMPLATE ($TEMPLATE_OK)"; exit 1; }
+
 if [ "$LIST" = "1" ]; then
   echo "outdir: $OUTDIR"
+  echo "comfy: $COMFY_URL, template: $TEMPLATE, res: ${W}x${H}, length: $LENGTH"
   n=0
   for entry in "${SHOTS[@]}"; do
     n=$((n+1)); printf '%02d %s (%ss)\n' "$n" "${entry%%|*}" "$DUR"
   done
-  echo "total: $n shots x ${DUR}s = $((n * DUR))s (mode=$MODE, steps=$STEPS)"
+  echo "total: $n shots x ${DUR}s = $((n * DUR))s (turbo steps=$STEPS)"
   exit 0
 fi
 
-curl -s -m 5 "http://127.0.0.1:$H3_PORT/health" >/dev/null \
-  || { echo "FAIL: 서버 없음. ./3-serve-fl2va.sh 또는 ./6-serve-ref2va.sh 먼저"; exit 1; }
+curl -s -m 5 "$COMFY_URL/system_stats" >/dev/null \
+  || { echo "FAIL: ComfyUI 없음 ($COMFY_URL). spark2 5-up.sh + spark1 proxy-up.sh 확인"; exit 1; }
 mkdir -p "$OUTDIR"
-[ -w "$OUTDIR" ] || { echo "FAIL: 쓰기 불가: $OUTDIR (sudo mkdir -p $OUTDIR && sudo chown -R $(whoami) $OUTDIR)"; exit 1; }
+[ -w "$OUTDIR" ] || { echo "FAIL: 쓰기 불가: $OUTDIR"; exit 1; }
 [ -f "$TIMINGS" ] || echo "shot,id,steps,dur_s,e2e_s" > "$TIMINGS"
 
-# 서버 모델명 캐시 (sidecar용, 실패 시 unknown).
-H3_MODEL="$(curl -s -m 5 "http://127.0.0.1:$H3_PORT/v1/models" 2>/dev/null \
-  | python3 -c 'import json,sys; print(json.load(sys.stdin)["data"][0]["id"])' 2>/dev/null || echo unknown)"
+# 공통 미러: results/ 산출물을 NAS Secondary로 복사 (NAS 없으면 조용히 무시).
+MIRROR_LIB="$REPO_ROOT/scripts/common/mirror-results.sh"
+[ -f "$MIRROR_LIB" ] && . "$MIRROR_LIB" || true
+command -v mirror_results >/dev/null 2>&1 || mirror_results() { :; }
 
-write_sidecar() { # out task e2e prompt seed — 생성 직후 <stem>.json 기록
-  local out="$1" task="$2" e2e="$3" prompt="$4" seed="$5"
-  SC_OUT="$out" SC_TASK="$task" SC_E2E="$e2e" SC_PROMPT="$prompt" SC_SEED="$seed" \
-  SC_URL="http://127.0.0.1:$H3_PORT" SC_MODEL="$H3_MODEL" SC_MODE="$MODE" \
-  SC_PROFILE="$(basename "$(cd "$BASEDIR" && pwd)")" SC_STEPS="$STEPS" SC_DUR="$DUR" \
+queue_shot() { # id prompt seed stem → stdout: prompt_id (stderr: 로그)
+  local id="$1" prompt="$2" seed="$3" stem="$4"
+  local wf
+  wf="$(mktemp)"
+  TEMPLATE="$TEMPLATE" WF_OUT="$wf" Q_PROMPT="$prompt" Q_SEED="$seed" \
+  Q_W="$W" Q_H="$H" Q_LEN="$LENGTH" Q_STEPS="$STEPS" Q_STEM="$stem" python3 - <<'PYEOF'
+import json, os
+d = json.load(open(os.environ["TEMPLATE"]))
+d["15"]["inputs"]["prompt"] = os.environ["Q_PROMPT"]
+d["15"]["inputs"]["width"] = int(os.environ["Q_W"])
+d["15"]["inputs"]["height"] = int(os.environ["Q_H"])
+d["15"]["inputs"]["length"] = int(os.environ["Q_LEN"])
+d["18"]["inputs"]["steps"] = int(os.environ["Q_STEPS"])
+d["19"]["inputs"]["noise_seed"] = int(os.environ["Q_SEED"])
+d["24"]["inputs"]["filename_prefix"] = "matchgirl/turbo/" + os.environ["Q_STEM"]
+json.dump(d, open(os.environ["WF_OUT"], "w"))
+PYEOF
+  (set -x; curl -sS -m 30 -X POST "$COMFY_URL/prompt" \
+    -H 'Content-Type: application/json' \
+    -d "{\"prompt\": $(cat "$wf")}") | python3 -c "import sys,json; print(json.load(sys.stdin)['prompt_id'])"
+  rm -f "$wf"
+}
+
+wait_shot() { # prompt_id → stdout: 완료 시각(초). 실패 시 exit 1
+  local pid="$1" start now st
+  start=$(date +%s)
+  while true; do
+    st="$(curl -s -m 15 "$COMFY_URL/history/$pid" 2>/dev/null || echo '{}')"
+    if echo "$st" | python3 -c "import sys,json; sys.exit(0 if json.load(sys.stdin).get('$pid',{}).get('status',{}).get('completed') else 1)" 2>/dev/null; then
+      date +%s; return 0
+    fi
+    if echo "$st" | grep -q '"status_str": *"error"'; then
+      echo "FAIL: ComfyUI 에러: $st" >&2; return 1
+    fi
+    now=$(date +%s)
+    [ $((now - start)) -gt "$GEN_TIMEOUT" ] && { echo "FAIL: 생성 타임아웃 (${GEN_TIMEOUT}s)" >&2; return 1; }
+    sleep 20
+  done
+}
+
+fetch_mp4() { # prompt_id out — history에서 mp4 찾아 /view로 다운로드
+  local pid="$1" out="$2"
+  PID="$pid" OUT="$out" URL="$COMFY_URL" python3 - <<'PYEOF'
+import json, os, urllib.request
+pid, url, out = os.environ["PID"], os.environ["URL"], os.environ["OUT"]
+h = json.load(urllib.request.urlopen(f"{url}/history/{pid}", timeout=30))[pid]
+cands = []
+for node_out in h.get("outputs", {}).values():
+    for key in ("gifs", "videos", "images"):
+        for f in node_out.get(key, []):
+            if f.get("filename", "").endswith((".mp4", ".wav")):
+                cands.append(f)
+mp4s = [c for c in cands if c["filename"].endswith(".mp4")] or cands
+if not mp4s:
+    raise SystemExit(f"FAIL: 산출물 없음: {json.dumps(h.get('outputs', {}))[:300]}")
+f = mp4s[0]
+q = f"filename={urllib.parse.quote(f['filename'])}&subfolder={urllib.parse.quote(f.get('subfolder',''))}&type={urllib.parse.quote(f.get('type','output'))}"
+urllib.request.urlretrieve(f"{url}/view?{q}", out)
+print(f"fetched: {out}")
+PYEOF
+}
+
+write_sidecar() { # out e2e prompt seed t0 t1 — 생성 직후 <stem>.json 기록
+  local out="$1" e2e="$2" prompt="$3" seed="$4" t0="$5" t1="$6"
+  SC_OUT="$out" SC_E2E="$e2e" SC_PROMPT="$prompt" SC_SEED="$seed" \
+  SC_URL="$COMFY_URL" SC_MODE="turbo" SC_PROFILE="turbo" \
+  SC_STEPS="$STEPS" SC_DUR="$DUR" SC_W="$W" SC_H="$H" SC_LEN="$LENGTH" \
   SC_HOST="$(hostname 2>/dev/null || echo unknown)" \
-  SC_GPU="$(nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo unknown)" \
-  SC_GIT="$(git -C "$BASEDIR" rev-parse --short HEAD 2>/dev/null || echo unknown)" \
   SC_DATE="$(date -u +%FT%TZ)" \
   SC_MEM_BU="${MEM_BU:-0}" SC_MEM_BA="${MEM_BA:-0}" SC_MEM_AU="${MEM_AU:-0}" \
   SC_MEM_AA="${MEM_AA:-0}" SC_SWAP_B="${MEM_SWAP_B:-0}" SC_SWAP_A="${MEM_SWAP_A:-0}" \
@@ -161,21 +243,20 @@ doc = {
     "created_at_utc": os.environ["SC_DATE"],
     "environment": {
         "host": os.environ["SC_HOST"],
-        "gpu": os.environ["SC_GPU"],
-        "git_rev": os.environ["SC_GIT"],
         "server_url": os.environ["SC_URL"],
-        "server_model": os.environ["SC_MODEL"],
+        "server": "spark2 ComfyUI (turbo_8step LoRA)",
         "script_profile": os.environ["SC_PROFILE"],
+        "note": "memory는 spark1 클라이언트 기준. 생성 부하는 spark2",
     },
     "method": {
-        "endpoint": "POST /v1/videos/sync",
+        "endpoint": "POST /prompt (ComfyUI API)",
         "mode": os.environ["SC_MODE"],
-        "task": os.environ["SC_TASK"],
+        "task": "t2v-turbo",
         "params": {
-            "width": 960, "height": 576, "fps": 24,
-            "num_inference_steps": steps, "flow_shift": 12,
-            "seed": int(os.environ["SC_SEED"]),
-            "duration": dur, "audio_flow_shift": 3.0,
+            "width": int(os.environ["SC_W"]), "height": int(os.environ["SC_H"]),
+            "length_frames": int(os.environ["SC_LEN"]),
+            "steps": steps, "seed": int(os.environ["SC_SEED"]),
+            "duration": dur,
         },
         "prompt": os.environ["SC_PROMPT"],
     },
@@ -195,6 +276,7 @@ doc = {
         "swap_used_after_mb": iint(os.environ["SC_SWAP_A"]),
         "gpu_temp_c": {"before": iint(os.environ["SC_GPU_TB"]),
                        "after": iint(os.environ["SC_GPU_TA"])},
+        "note": "memory·온도는 spark1 클라이언트 기준. 생성 부하는 spark2",
     },
 }
 with open(side, "w") as f:
@@ -204,50 +286,31 @@ PYEOF
 }
 
 n=0
-# 공통 미러: results/ 산출물을 NAS Secondary로 복사 (NAS 없으면 조용히 무시).
-MIRROR_LIB="$(cd "$BASEDIR/../../../.." && pwd)/mirror-results.sh"
-[ -f "$MIRROR_LIB" ] && . "$MIRROR_LIB" || true
-command -v mirror_results >/dev/null 2>&1 || mirror_results() { :; }
 for entry in "${SHOTS[@]}"; do
   n=$((n+1))
   id="${entry%%|*}"
   prompt="${entry#*|}"
-  out="$OUTDIR/$(printf '%02d' "$n")_${id#[0-9][0-9]_}_s${STEPS}.mp4"
+  stem="$(printf '%02d' "$n")_${id#[0-9][0-9]_}_turbo"
+  out="$OUTDIR/$stem.mp4"
   seed=$((1101 + n))
   if [ -f "$out" ] && dur_ok "$out"; then
     echo "===== [$n/${#SHOTS[@]}] $id: skip exists ====="
   else
-    echo "===== [$n/${#SHOTS[@]}] $id (${DUR}s, $STEPS steps, mode=$MODE) ====="
+    echo "===== [$n/${#SHOTS[@]}] $id (${DUR}s, turbo steps=$STEPS, res=${W}x${H}) ====="
     read -r MEM_BU MEM_BA MEM_SWAP_B <<<"$(mem_snapshot)"; GPU_TB="$(gpu_temp)"
-    if [ "$MODE" = "chain" ] && [ "$n" -gt 1 ] && [ -f "$FRAME" ]; then
-      TASK="ref2va"
-      E2E=$(set -x; curl --fail-with-body -sS -X POST "http://127.0.0.1:$H3_PORT/v1/videos/sync" \
-        --max-time 14400 \
-        -F "input_reference=@${FRAME};type=image/jpeg" \
-        -F "prompt=${prompt}" \
-        -F 'width=960' -F 'height=576' -F 'fps=24' \
-        -F "num_inference_steps=$STEPS" -F 'flow_shift=12' -F "seed=$seed" \
-        -F "extra_params={\"task\":\"ref2va\",\"duration\":$DUR,\"audio_flow_shift\":3.0}" \
-        -o "$out" -w '%{time_total}')
-    else
-      TASK="t2va"
-      E2E=$(set -x; curl --fail-with-body -sS -X POST "http://127.0.0.1:$H3_PORT/v1/videos/sync" \
-        -F "prompt=${prompt}" \
-        -F 'width=960' -F 'height=576' -F 'aspect_ratio=16:9' \
-        -F 'fps=24' -F "num_inference_steps=$STEPS" -F 'flow_shift=12' -F "seed=$seed" \
-        -F "extra_params={\"task\":\"t2va\",\"duration\":$DUR,\"audio_flow_shift\":3.0}" \
-        --max-time 7200 -o "$out" -w '%{time_total}')
-    fi
+    T0=$(date +%s)
+    PID="$(queue_shot "$id" "$prompt" "$seed" "$stem")"
+    echo "prompt_id=$PID"
+    T1="$(wait_shot "$PID")"
+    E2E=$((T1 - T0))
+    fetch_mp4 "$PID" "$out"
     echo "$n,$id,$STEPS,$DUR,$E2E" >> "$TIMINGS"
     ls -lh "$out"
     read -r MEM_AU MEM_AA MEM_SWAP_A <<<"$(mem_snapshot)"; GPU_TA="$(gpu_temp)"
-    write_sidecar "$out" "$TASK" "$E2E" "$prompt" "$seed"
+    write_sidecar "$out" "$E2E" "$prompt" "$seed" "$T0" "$T1"
     mirror_results
   fi
   dur_ok "$out" || { echo "FAIL: 길이 이상: $out"; exit 1; }
-  if [ "$MODE" = "chain" ]; then
-    (set -x; ffmpeg -v error -y -sseof -3 -i "$out" -frames:v 1 "$FRAME")
-  fi
 done
 
 echo "== 합산 검증 =="
@@ -259,4 +322,4 @@ EXPECT=$((${#SHOTS[@]} * DUR))
 echo "shots: ${#SHOTS[@]}, total: ${TOTAL}s (expect ~${EXPECT}s)"
 echo "timings: $TIMINGS"
 echo
-echo "다음: video/showcase/assemble.sh \"$OUTDIR\" \"$BASEDIR/matchgirl.mp4\"  (리포 루트에서 실행)"
+echo "다음: scripts/common/assemble.sh \"$OUTDIR\" \"$REPO_ROOT/results/matchgirl/profiles/s08-352p-comfy-turbo/matchgirl_turbo.mp4\"  (리포 루트에서 실행)"

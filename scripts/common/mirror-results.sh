@@ -12,7 +12,7 @@ set -uo pipefail
 
 mirror_results() {
   local root src dest
-  root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
   src="$root/results"
   dest="${NAS_DEST:-/rosenas/data/AIML/video-generation/results}"
   guard="${MIRROR_GUARD:-/rosenas/data/AIML}"

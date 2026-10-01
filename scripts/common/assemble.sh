@@ -8,7 +8,7 @@ set -euo pipefail
 BASEDIR="$(dirname "$0")"
 REPO="$(cd "$BASEDIR/../.." && pwd)"
 SHOWCASE_SLUG="${SHOWCASE_SLUG:-matchgirl}"
-QUALITY_PROFILE="${QUALITY_PROFILE:-preview}"
+QUALITY_PROFILE="${QUALITY_PROFILE:-s10-576p-vllm-t2va}"
 INDIR="${1:-$REPO/results/$SHOWCASE_SLUG/profiles/$QUALITY_PROFILE/shots}"
 OUT="${2:-$REPO/results/$SHOWCASE_SLUG/profiles/$QUALITY_PROFILE/$SHOWCASE_SLUG.mp4}"
 EXPECT="${EXPECT:-180}"

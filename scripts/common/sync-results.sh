@@ -4,7 +4,7 @@
 set -euo pipefail
 
 BASEDIR="$(cd "$(dirname "$0")" && pwd)"
-SRC="$BASEDIR/results"
+SRC="$BASEDIR/../../results"
 DEST="${NAS_DEST:-/rosenas/data/AIML/video-generation/results}"
 [ -d "$SRC" ] || { echo "FAIL: $SRC 없음"; exit 1; }
 mkdir -p "$DEST"

@@ -1,0 +1,51 @@
+{
+  "file": "21_third_strike_s10.mp4",
+  "created_at_utc": "2026-10-01T10:22:10Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "78c4d1b",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "preview"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 10,
+      "flow_shift": 12,
+      "seed": 1122,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a third match bursts into a tall steady flame cupped in both hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes face glowing amber. Low angle. Strong flare-up, cupped-hands warmth tone, snow sizzling."
+  },
+  "speed": {
+    "e2e_s": 333.347,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 3153074,
+    "sec_per_step": 33.335,
+    "realtime_factor": 66.67
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109993,
+      "available": 14614
+    },
+    "memory_after_mb": {
+      "used": 109908,
+      "available": 14699
+    },
+    "swap_used_before_mb": 8004,
+    "swap_used_after_mb": 8004,
+    "gpu_temp_c": {
+      "before": 60,
+      "after": 64
+    }
+  }
+}

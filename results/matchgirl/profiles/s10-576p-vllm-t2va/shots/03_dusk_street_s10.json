@@ -1,0 +1,51 @@
+{
+  "file": "03_dusk_street_s10.mp4",
+  "created_at_utc": "2026-10-01T08:40:57Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "78c4d1b",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "preview"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 10,
+      "flow_shift": 12,
+      "seed": 1104,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic period film, the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, snow falling. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+  },
+  "speed": {
+    "e2e_s": 323.266,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 4799838,
+    "sec_per_step": 32.327,
+    "realtime_factor": 64.65
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 110295,
+      "available": 14312
+    },
+    "memory_after_mb": {
+      "used": 110522,
+      "available": 14085
+    },
+    "swap_used_before_mb": 7909,
+    "swap_used_after_mb": 7861,
+    "gpu_temp_c": {
+      "before": 66,
+      "after": 66
+    }
+  }
+}

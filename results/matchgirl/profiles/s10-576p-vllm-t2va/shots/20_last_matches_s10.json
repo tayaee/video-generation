@@ -1,0 +1,51 @@
+{
+  "file": "20_last_matches_s10.mp4",
+  "created_at_utc": "2026-10-01T10:16:37Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "78c4d1b",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "preview"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 10,
+      "flow_shift": 12,
+      "seed": 1121,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes opens the bundle with numb fingers and counts the last matches, three left, frost on the box labels. Shallow focus. Cardboard rub, finger tremble foley, wind underneath."
+  },
+  "speed": {
+    "e2e_s": 327.045,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 2453845,
+    "sec_per_step": 32.704,
+    "realtime_factor": 65.41
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109887,
+      "available": 14720
+    },
+    "memory_after_mb": {
+      "used": 109834,
+      "available": 14773
+    },
+    "swap_used_before_mb": 8004,
+    "swap_used_after_mb": 8004,
+    "gpu_temp_c": {
+      "before": 65,
+      "after": 61
+    }
+  }
+}

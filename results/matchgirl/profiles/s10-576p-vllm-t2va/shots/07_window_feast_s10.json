@@ -1,0 +1,51 @@
+{
+  "file": "07_window_feast_s10.mp4",
+  "created_at_utc": "2026-10-01T09:03:24Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "78c4d1b",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "preview"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 10,
+      "flow_shift": 12,
+      "seed": 1108,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic warm restaurant window on the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street, the same evening, moments later, diners silhouetted around a feast. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches from the snowy dark outside, nose near glass. Slow push-in. Muffled laughter and clinking cutlery behind glass, cold wind outside."
+  },
+  "speed": {
+    "e2e_s": 340.052,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 4614485,
+    "sec_per_step": 34.005,
+    "realtime_factor": 68.01
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 110494,
+      "available": 14113
+    },
+    "memory_after_mb": {
+      "used": 110136,
+      "available": 14471
+    },
+    "swap_used_before_mb": 7963,
+    "swap_used_after_mb": 7959,
+    "gpu_temp_c": {
+      "before": 66,
+      "after": 65
+    }
+  }
+}

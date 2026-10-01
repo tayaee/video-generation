@@ -22,8 +22,9 @@ MODE="${MODE:-t2va}"
 LIST="${LIST:-0}"
 COUNT="${COUNT:-0}"
 BASEDIR="$(dirname "$0")"
+REPO_ROOT="$(cd "$BASEDIR/../../../.." && pwd)"
 # 산출물은 프로파일 디렉토리 안 shots/ (리포 Primary, NAS는 sync-results.sh로 복사).
-OUTDIR="${OUTDIR:-$BASEDIR/shots}"
+OUTDIR="${OUTDIR:-$REPO_ROOT/results/matchgirl/profiles/s10-576p-vllm-t2va/shots}"
 TIMINGS="$OUTDIR/timings.csv"
 FRAME="$OUTDIR/.chain_last.jpg"
 
@@ -205,7 +206,7 @@ PYEOF
 
 n=0
 # 공통 미러: results/ 산출물을 NAS Secondary로 복사 (NAS 없으면 조용히 무시).
-MIRROR_LIB="$(cd "$BASEDIR/../../../.." && pwd)/mirror-results.sh"
+MIRROR_LIB="$REPO_ROOT/scripts/common/mirror-results.sh"
 [ -f "$MIRROR_LIB" ] && . "$MIRROR_LIB" || true
 command -v mirror_results >/dev/null 2>&1 || mirror_results() { :; }
 for entry in "${SHOTS[@]}"; do
@@ -259,4 +260,4 @@ EXPECT=$((${#SHOTS[@]} * DUR))
 echo "shots: ${#SHOTS[@]}, total: ${TOTAL}s (expect ~${EXPECT}s)"
 echo "timings: $TIMINGS"
 echo
-echo "다음: video/showcase/assemble.sh \"$OUTDIR\" \"$BASEDIR/matchgirl.mp4\"  (리포 루트에서 실행)"
+echo "다음: scripts/common/assemble.sh \"$OUTDIR\"  (리포 루트에서 실행)"
