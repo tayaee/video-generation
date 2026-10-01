@@ -11,7 +11,7 @@ SHOWCASE_SLUG="${SHOWCASE_SLUG:-matchgirl}"
 QUALITY_PROFILE="${QUALITY_PROFILE:-preview}"
 INDIR="${1:-$REPO/results/$SHOWCASE_SLUG/profiles/$QUALITY_PROFILE/shots}"
 OUT="${2:-$REPO/results/$SHOWCASE_SLUG/profiles/$QUALITY_PROFILE/$SHOWCASE_SLUG.mp4}"
-EXPECT="${EXPECT:-288}"
+EXPECT="${EXPECT:-180}"
 EXPECT_SHOTS="${EXPECT_SHOTS:-36}"
 # 공통 미러: 본편을 NAS Secondary로 복사 (NAS 없으면 조용히 무시).
 [ -f "$REPO/mirror-results.sh" ] && . "$REPO/mirror-results.sh" || true

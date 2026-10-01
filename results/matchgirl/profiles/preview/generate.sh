@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# results/matchgirl/profiles/preview/generate.sh: 5분 단편 프리뷰 (36샷 x 8s = 288s, STEPS=10).
+# results/matchgirl/profiles/preview/generate.sh: 단편 프리뷰 (36샷 x 5s = 180s, STEPS=10).
 # (full 프로파일은 profiles/full/generate.sh — STEPS=50. STEPS/DUR/MODE/COUNT env로 조정 가능)
-# DUR 기본값 8은 GB10 공식 검증 스펙(960x576/8s). 15s는 서버 한계 초과로 사용 금지
-# (15s 요청이 diffusion 워커를 멈추고 2시간 타임아웃으로만 죽는 것 확인됨, 2026-10-01).
+# DUR 기본값 5: 7s에서 HTTP 500 + 서버 사망 실측(2026-10-01)이라 안정구간 5초로 확정.
+# 15s는 서버 한계 초과로 사용 금지 (diffusion 워커를 멈추고 2시간 타임아웃으로만 죽음).
 # 원작: 안데르센 '성냥팔이 소녀' 축약 (public domain). 실사(photoreal) 지정.
 # 5막 완결: 막1 새해 전날 거리 / 막2 첫 성냥·난로 / 막3 두 번째·거위 /
 #   막4 세 번째·트리 / 막5 마지막 다발·할머니·새해 아침.
@@ -17,7 +17,7 @@ set -euo pipefail
 
 H3_PORT="${H3_PORT:-8000}"
 STEPS="${STEPS:-10}"
-DUR="${DUR:-8}"
+DUR="${DUR:-5}"
 MODE="${MODE:-t2va}"
 LIST="${LIST:-0}"
 COUNT="${COUNT:-0}"
@@ -28,49 +28,58 @@ TIMINGS="$OUTDIR/timings.csv"
 FRAME="$OUTDIR/.chain_last.jpg"
 
 GIRL="a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes"
+# 장소 바이블 (같은 장면 고정용, verbatim 유지. 인물 바이블과 동일 기법).
+ATTIC="the same small attic room at dawn, frost on the inside of the window"
+STREET="the same snow-covered cobblestone street at New Year Eve dusk, warm windows glowing across the street"
+ALLEY="the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing"
+DAWN_STREET="the same cobblestone street at cold blue dawn, thin snow over everything, pale morning light"
+# 시간 앵커 (같은 장면 내 연속 표시).
+SAME_EVE="the same evening, moments later"
+SAME_NIGHT="the same night, moments later"
+SAME_DAWN="the same cold dawn, moments later"
 
 SHOTS=(
 # ── 막1: 새해 전날 (아침 출발 → 해질녘 거리) ──
-"01_morning_attic|Photorealistic dawn attic room, frost on the inside of a small window. ${GIRL} wraps a thin shawl, tucks the match bundle inside her coat, and steps out into the cold morning. Slow pull-back. Floorboard creaks, thin blanket rustle, distant rooster, cold wind under the door."
+"01_morning_attic|Photorealistic ${ATTIC}. ${GIRL} wraps a thin shawl, tucks the match bundle inside her coat, and steps out into the cold morning. Slow pull-back. Floorboard creaks, thin blanket rustle, distant rooster, cold wind under the door."
 "02_lost_slippers|Photorealistic snowy morning street, two carriages thunder past. ${GIRL} stumbles in oversized slippers, one flies off and a running boy snatches it up laughing, gone around the corner. Handheld panic. Horse hooves, wheel rattle, boy laughter fading, her small cry in Korean, 내 신발!"
-"03_dusk_street|Photorealistic period film, New Year Eve dusk, snow falling on a cobblestone street. ${GIRL} holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Warm windows glow across the street. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
-"04_barefoot_snow|Photorealistic close-up, small bare feet stepping into fresh snow, toes red with cold. ${GIRL} hurries past shuttered shops. Handheld follow. Snow crunch, ragged breathing, a far-off children's choir rehearsing a carol in Korean, wind gusts."
-"05_unsold_matches|Photorealistic street level, frost-covered bundle of matchboxes in small hands. ${GIRL} holds them up to hurrying passersby legs, no one stops. Static then slight tilt down. Muffled footsteps fading, coins clinking elsewhere, sighing wind."
-"06_rich_family|Photorealistic, a wealthy family in furs hurries past with parcels and a toy horse. ${GIRL} reaches out her matches, the mother pulls her child away without a glance. Slow motion pass. Muffled rich laughter, sleigh bells, her whisper in Korean, 하나만 사주세요."
-"07_window_feast|Photorealistic warm restaurant window at night, diners silhouetted around a feast. ${GIRL} watches from the snowy dark outside, nose near glass. Slow push-in. Muffled laughter and clinking cutlery behind glass, cold wind outside."
+"03_dusk_street|Photorealistic period film, ${STREET}, snow falling. ${GIRL} holds up her matches to hurrying passersby and calls out in Korean, 성냥 사세요, breath fogging. Slow dolly-in. Faint Korean street cry, wind howl, distant church bells, crunching snow under boots."
+"04_barefoot_snow|Photorealistic close-up on ${STREET}, ${SAME_EVE}, small bare feet stepping into fresh snow, toes red with cold. ${GIRL} hurries past shuttered shops. Handheld follow. Snow crunch, ragged breathing, a far-off children's choir rehearsing a carol in Korean, wind gusts."
+"05_unsold_matches|Photorealistic street level on ${STREET}, ${SAME_EVE}, frost-covered bundle of matchboxes in small hands. ${GIRL} holds them up to hurrying passersby legs, no one stops. Static then slight tilt down. Muffled footsteps fading, coins clinking elsewhere, sighing wind."
+"06_rich_family|Photorealistic on ${STREET}, ${SAME_EVE}, a wealthy family in furs hurries past with parcels and a toy horse. ${GIRL} reaches out her matches, the mother pulls her child away without a glance. Slow motion pass. Muffled rich laughter, sleigh bells, her whisper in Korean, 하나만 사주세요."
+"07_window_feast|Photorealistic warm restaurant window on ${STREET}, ${SAME_EVE}, diners silhouetted around a feast. ${GIRL} watches from the snowy dark outside, nose near glass. Slow push-in. Muffled laughter and clinking cutlery behind glass, cold wind outside."
 # ── 막2: 첫 성냥 · 난로 ──
-"08_no_home|Photorealistic, ${GIRL} looks back toward a lit alley where home would be, then shakes her head and crouches between two houses, afraid of her father's switch with no money earned. Trembling close-up. Her chattering whisper in Korean, 빈손으론 못 돌아가, snow hissing on stone."
-"09_first_strike|Photorealistic dark alley corner, ${GIRL} crouches and strikes a match against the wall. Sudden flare blooms across her face. Macro of the flame catching. Sharp hiss, held breath, then soft crackle, wind dropping away."
+"08_no_home|Photorealistic, ${GIRL} looks back toward the lit street, then shakes her head and crouches in ${ALLEY}, afraid of her father's switch with no money earned. Trembling close-up. Her chattering whisper in Korean, 빈손으론 못 돌아가, snow hissing on stone."
+"09_first_strike|Photorealistic ${ALLEY}, ${SAME_NIGHT}, ${GIRL} crouches and strikes a match against the wall. Sudden flare blooms across her face. Macro of the flame catching. Sharp hiss, held breath, then soft crackle, wind dropping away."
 "10_stove_vision|Photorealistic dream vision, a great iron stove glowing with brass ornaments, radiant heat waves. ${GIRL} stretches frozen hands toward it, smiling. Slow orbit. Deep fire crackle, metallic ticks, warm low hum."
 "11_warm_hands|Photorealistic close-up inside the vision, her small red hands open before the glowing stove grate, frost melting off her fingertips into steam. ${GIRL} sighs with relief. Extreme macro. Steam hiss, soft relieved sigh in Korean, 따뜻해."
-"12_vision_dies|Photorealistic, the stove vision gutters and dissolves back into a bare cold wall. ${GIRL} stares at the dead match, smile fading. Match cut to wide. Flame sputter, cold wind rushing back, faint whimper."
-"13_cold_returns|Photorealistic, ${GIRL} shivering hard in the alley, wrapping the coat tighter, teeth chattering, deciding on a second match. Trembling close-up. Chattering teeth, shuddering breaths, snow hissing on stone."
+"12_vision_dies|Photorealistic, ${SAME_NIGHT}, the stove vision gutters and dissolves back into ${ALLEY}. ${GIRL} stares at the dead match, smile fading. Match cut to wide. Flame sputter, cold wind rushing back, faint whimper."
+"13_cold_returns|Photorealistic, ${SAME_NIGHT}, ${GIRL} shivering hard in ${ALLEY}, wrapping the coat tighter, teeth chattering, deciding on a second match. Trembling close-up. Chattering teeth, shuddering breaths, snow hissing on stone."
 # ── 막3: 두 번째 · 거위 ──
-"14_second_strike|Photorealistic, a second match flares against the brick, brighter, lighting falling snowflakes like sparks. ${GIRL} gasps. Slow motion flare. Strike scrape, whoosh of flame, tiny awed gasp."
+"14_second_strike|Photorealistic ${ALLEY}, ${SAME_NIGHT}, a second match flares against the brick, brighter, lighting falling snowflakes like sparks. ${GIRL} gasps. Slow motion flare. Strike scrape, whoosh of flame, tiny awed gasp."
 "15_goose_vision|Photorealistic dream vision, a roast goose steaming on a white tablecloth, stuffing and apples, carving knife gleaming. ${GIRL} leans in wide-eyed. Push-in. Rich sizzle, clink of the knife, warm room tone."
 "16_goose_rises|Photorealistic dream logic, the roast goose rises with knife and fork in its breast and waddles toward the poor child. ${GIRL} laughs in delight. Gentle tracking. Playful sizzle, soft child laughter, music-box notes."
 "17_almost_taste|Photorealistic, ${GIRL} reaches both hands for the waddling goose, mouth open, and the vision bursts like a soap bubble into cold sparks. Her smile freezes. Rack focus. Bubble pop, cold rush, tiny disappointed cry."
-"18_dark_again|Photorealistic, the vision snaps to black alley, snow falling harder. ${GIRL} alone again under a street lamp. Crane up. Cutoff of music, heavy snowfall hush, distant midnight bells."
-"19_blizzard|Photorealistic whiteout gust through the alley, ${GIRL} staggers, shields the bundle inside her coat, snow plastering her reddish-gold hair. Low angle struggle. Blizzard roar, coat flapping, her strained breath."
-"20_last_matches|Photorealistic close-up, ${GIRL} opens the bundle with numb fingers and counts the last matches, three left, frost on the box labels. Shallow focus. Cardboard rub, finger tremble foley, wind underneath."
+"18_dark_again|Photorealistic, the vision snaps to ${ALLEY}, ${SAME_NIGHT}, snow falling harder. ${GIRL} alone again under the street lamp. Crane up. Cutoff of music, heavy snowfall hush, distant midnight bells."
+"19_blizzard|Photorealistic whiteout gust through ${ALLEY}, ${SAME_NIGHT}, ${GIRL} staggers, shields the bundle inside her coat, snow plastering her reddish-gold hair. Low angle struggle. Blizzard roar, coat flapping, her strained breath."
+"20_last_matches|Photorealistic close-up in ${ALLEY}, ${SAME_NIGHT}, ${GIRL} opens the bundle with numb fingers and counts the last matches, three left, frost on the box labels. Shallow focus. Cardboard rub, finger tremble foley, wind underneath."
 # ── 막4: 세 번째 · 트리 ──
-"21_third_strike|Photorealistic, a third match bursts into a tall steady flame cupped in both hands. ${GIRL} face glowing amber. Low angle. Strong flare-up, cupped-hands warmth tone, snow sizzling."
+"21_third_strike|Photorealistic ${ALLEY}, ${SAME_NIGHT}, a third match bursts into a tall steady flame cupped in both hands. ${GIRL} face glowing amber. Low angle. Strong flare-up, cupped-hands warmth tone, snow sizzling."
 "22_tree_vision|Photorealistic dream vision, a towering Christmas tree covered in lit candles and painted ornaments. ${GIRL} reaches up in wonder. Slow tilt up. Soft Korean choir, candle sizzle, ornament glass chimes."
 "23_ornaments|Photorealistic inside the vision, glass ornaments reflect her wondering face a hundredfold as ${GIRL} touches one gently and it rings. Slow drift. Glass chime, her delighted whisper in Korean, 예쁘다."
 "24_candles_rise|Photorealistic, the tree candles detach and rise into the night sky as stars. ${GIRL} watches, mouth open. Tilt to sky. Korean choir swelling, rising shimmer tone, wind fading to silence."
 "25_falling_star|Photorealistic night sky, one star detaches and falls. ${GIRL} whispers to the dark in Korean, 오늘 밤 누군가 죽어. Extreme close-up on eyes. Hushed Korean whisper, long reverb tail, total stillness."
 "26_grandmother_memory|Photorealistic warm flashback, her beloved grandmother lifts the laughing child onto her lap by a fireplace, the only face that ever loved her. ${GIRL} as a small child giggles. Soft slow motion. Fireplace crackle, kind humming, child giggle."
-"27_bundle_decision|Photorealistic back in the frozen alley, ${GIRL} looks at the last matches, then at the sky where the star fell, and presses the whole bundle together with sudden resolve. Close-up on eyes. Heartbeat rising, matchbox shake, resolve breath."
+"27_bundle_decision|Photorealistic back in ${ALLEY}, ${SAME_NIGHT}, ${GIRL} looks at the last matches, then at the sky where the star fell, and presses the whole bundle together with sudden resolve. Close-up on eyes. Heartbeat rising, matchbox shake, resolve breath."
 # ── 막5: 마지막 다발 · 할머니 · 새해 아침 ──
-"28_bundle_blaze|Photorealistic, ${GIRL} strikes the whole bundle at once, a bright roaring blaze lighting the whole alley like noon. Wide shot. Roaring flare, crackling storm of matches, heartbeat drum."
+"28_bundle_blaze|Photorealistic, ${GIRL} strikes the whole bundle at once, a bright roaring blaze lighting ${ALLEY} like noon. Wide shot. Roaring flare, crackling storm of matches, heartbeat drum."
 "29_grandmother|Photorealistic radiant vision, her grandmother appears in warm light, arms open, kindest face, murmuring in Korean, 이제 따뜻할 거야. ${GIRL} runs into the embrace. Slow motion. Soft Korean murmur and humming lullaby, warmest room tone, faint Korean choir."
 "30_embrace|Photorealistic inside the blaze, the grandmother wraps ${GIRL} in her shawl, the child sobbing with joy, snowflakes turning to sparks around them. Slow orbit. Shawl fabric, joyful sobs, choir warming."
 "31_ascent|Photorealistic ascent above snowy rooftops, the grandmother carrying ${GIRL} upward, town shrinking below, snowflakes hanging still. Crane soaring. Korean choir and heartbeat slowing together, then quiet."
 "32_among_stars|Photorealistic, the grandmother and ${GIRL} drift among gentle stars, the child asleep on her shoulder, utterly at peace. Weightless drift. Choir dissolving to silence, one soft bell."
-"33_dawn_alley|Photorealistic cold dawn, the alley lies empty and blue. ${GIRL} leans against the wall under thin snow, still, the burnt bundle beside her. Slow descent from sky to street. Dawn wind, far-off cock crow, emptiness."
-"34_dawn_smile|Photorealistic dawn close-up, her small face with a peaceful smile, cheeks rosy, one burnt match still between her fingers. ${GIRL} rests forever warm in the vision. Static reverent close-up. Morning stillness, faint thaw drip."
-"35_found_bells|Photorealistic, morning passersby gather and kneel around her, a woman covers her with a shawl, church bells ring the New Year. ${GIRL} is found smiling. Rising crane. Church bells, murmuring crowd, a woman's soft sob in Korean, 불쌍해서 어째."
-"36_new_year|Photorealistic New Year morning wide, sun breaks over snowy rooftops, children run laughing with new toys past the quiet alley, light blooming over the town. Slow pull-back to sky. Children laughter, morning bells, birdsong, thaw dripping into the new year."
+"33_dawn_alley|Photorealistic cold dawn, ${ALLEY} lies empty and blue, thin snow over everything. ${GIRL} leans against the wall under thin snow, still, the burnt bundle beside her. Slow descent from sky to street. Dawn wind, far-off cock crow, emptiness."
+"34_dawn_smile|Photorealistic dawn close-up in ${ALLEY}, ${SAME_DAWN}, her small face with a peaceful smile, cheeks rosy, one burnt match still between her fingers. ${GIRL} rests forever warm in the vision. Static reverent close-up. Morning stillness, faint thaw drip."
+"35_found_bells|Photorealistic, ${SAME_DAWN}, morning passersby gather and kneel around her in ${ALLEY}, a woman covers her with a shawl, church bells ring the New Year. ${GIRL} is found smiling. Rising crane. Church bells, murmuring crowd, a woman's soft sob in Korean, 불쌍해서 어째."
+"36_new_year|Photorealistic New Year morning wide on ${DAWN_STREET}, ${SAME_DAWN}, sun breaks over snowy rooftops, children run laughing with new toys past the quiet alley, light blooming over the town. Slow pull-back to sky. Children laughter, morning bells, birdsong, thaw dripping into the new year."
 )
 
 # COUNT>0이면 앞 N샷만 (smoke용). LIST·EXPECT·resume 로직이 자동 추종.
