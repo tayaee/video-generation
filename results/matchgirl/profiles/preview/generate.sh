@@ -83,6 +83,15 @@ dur_ok() { # file
   awk -v d="$got" -v e="$DUR" 'BEGIN{exit !(d>=e-2 && d<=e+15)}'
 }
 
+mem_snapshot() { # "used_MB available_MB swap_used_MB" 출력
+  awk '/^MemTotal:/{t=$2} /^MemAvailable:/{a=$2} /^SwapTotal:/{st=$2} /^SwapFree:/{sf=$2} \
+    END{printf "%d %d %d", (t-a)/1024, a/1024, (st-sf)/1024}' /proc/meminfo 2>/dev/null || echo "0 0 0"
+}
+
+gpu_temp() { # GPU 온도(℃) 출력, 실패 시 unknown
+  nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader 2>/dev/null | head -1 | tr -d ' \n' || echo unknown
+}
+
 if [ "$LIST" = "1" ]; then
   echo "outdir: $OUTDIR"
   n=0
@@ -112,10 +121,18 @@ write_sidecar() { # out task e2e prompt seed — 생성 직후 <stem>.json 기�
   SC_GPU="$(nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo unknown)" \
   SC_GIT="$(git -C "$BASEDIR" rev-parse --short HEAD 2>/dev/null || echo unknown)" \
   SC_DATE="$(date -u +%FT%TZ)" \
+  SC_MEM_BU="${MEM_BU:-0}" SC_MEM_BA="${MEM_BA:-0}" SC_MEM_AU="${MEM_AU:-0}" \
+  SC_MEM_AA="${MEM_AA:-0}" SC_SWAP_B="${MEM_SWAP_B:-0}" SC_SWAP_A="${MEM_SWAP_A:-0}" \
+  SC_GPU_TB="${GPU_TB:-unknown}" SC_GPU_TA="${GPU_TA:-unknown}" \
   python3 - <<'PYEOF'
 import json, os, subprocess
 out = os.environ["SC_OUT"]
 side = out[:-4] + ".json" if out.endswith(".mp4") else out + ".json"
+def iint(v):
+    try:
+        return int(float(v))
+    except (TypeError, ValueError):
+        return None
 try:
     probed = float(subprocess.check_output(
         ["ffprobe", "-v", "error", "-show_entries", "format=duration",
@@ -160,6 +177,16 @@ doc = {
         "sec_per_step": round(e2e / steps, 3) if steps else 0,
         "realtime_factor": round(e2e / dur, 2) if dur else 0,
     },
+    "resources": {
+        "memory_before_mb": {"used": iint(os.environ["SC_MEM_BU"]),
+                             "available": iint(os.environ["SC_MEM_BA"])},
+        "memory_after_mb": {"used": iint(os.environ["SC_MEM_AU"]),
+                            "available": iint(os.environ["SC_MEM_AA"])},
+        "swap_used_before_mb": iint(os.environ["SC_SWAP_B"]),
+        "swap_used_after_mb": iint(os.environ["SC_SWAP_A"]),
+        "gpu_temp_c": {"before": iint(os.environ["SC_GPU_TB"]),
+                       "after": iint(os.environ["SC_GPU_TA"])},
+    },
 }
 with open(side, "w") as f:
     json.dump(doc, f, ensure_ascii=False, indent=2)
@@ -182,6 +209,7 @@ for entry in "${SHOTS[@]}"; do
     echo "===== [$n/${#SHOTS[@]}] $id: skip exists ====="
   else
     echo "===== [$n/${#SHOTS[@]}] $id (${DUR}s, $STEPS steps, mode=$MODE) ====="
+    read -r MEM_BU MEM_BA MEM_SWAP_B <<<"$(mem_snapshot)"; GPU_TB="$(gpu_temp)"
     if [ "$MODE" = "chain" ] && [ "$n" -gt 1 ] && [ -f "$FRAME" ]; then
       TASK="ref2va"
       E2E=$(set -x; curl --fail-with-body -sS -X POST "http://127.0.0.1:$H3_PORT/v1/videos/sync" \
@@ -203,6 +231,7 @@ for entry in "${SHOTS[@]}"; do
     fi
     echo "$n,$id,$STEPS,$DUR,$E2E" >> "$TIMINGS"
     ls -lh "$out"
+    read -r MEM_AU MEM_AA MEM_SWAP_A <<<"$(mem_snapshot)"; GPU_TA="$(gpu_temp)"
     write_sidecar "$out" "$TASK" "$E2E" "$prompt" "$seed"
     mirror_results
   fi
