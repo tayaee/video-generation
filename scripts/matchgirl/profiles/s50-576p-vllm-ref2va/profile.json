@@ -1,0 +1,13 @@
+{
+  "id": "s50-576p-vllm-ref2va",
+  "short": "정합성",
+  "title": "체인 정합성판",
+  "purpose": "이전 샷 끝프레임 체이닝으로 인물·장소 드리프트 최소화. Ref2VA 서버+REF0 필수.",
+  "engine": "vLLM-Omni Ref2VA (spark1)",
+  "task": "ref2va-chain",
+  "steps": 50,
+  "resolution": "960x576",
+  "fps": 24,
+  "duration_s": 5,
+  "ladder_order": 6
+}

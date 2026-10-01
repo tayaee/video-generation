@@ -1,0 +1,13 @@
+{
+  "id": "s50-576p-vllm-t2va",
+  "short": "납품",
+  "title": "납품판",
+  "purpose": "최종 본편용 최고화질. 샷당 약 40분, 전체 약 20시간.",
+  "engine": "vLLM-Omni FL2VA (spark1)",
+  "task": "t2va",
+  "steps": 50,
+  "resolution": "960x576",
+  "fps": 24,
+  "duration_s": 5,
+  "ladder_order": 5
+}

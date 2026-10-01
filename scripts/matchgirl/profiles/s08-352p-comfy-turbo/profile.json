@@ -1,0 +1,13 @@
+{
+  "id": "s08-352p-comfy-turbo",
+  "short": "스케치",
+  "title": "터보 스케치판",
+  "purpose": "프롬프트·구도 빠른 확인용. 증류 LoRA라 동급 속도 대비 깨끗.",
+  "engine": "ComfyUI turbo (spark2)",
+  "task": "t2v-turbo",
+  "steps": 8,
+  "resolution": "608x352",
+  "fps": 24,
+  "duration_s": 5,
+  "ladder_order": 3
+}

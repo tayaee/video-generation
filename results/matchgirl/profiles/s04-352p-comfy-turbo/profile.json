@@ -1,0 +1,13 @@
+{
+  "id": "s04-352p-comfy-turbo",
+  "short": "previz",
+  "title": "초고속 previz",
+  "purpose": "이야기 리듬 확인용. 8step LoRA를 4스텝으로 돌리는 실험 구성이라 화면 판단용 부적합.",
+  "engine": "ComfyUI turbo (spark2)",
+  "task": "t2v-turbo",
+  "steps": 4,
+  "resolution": "608x352",
+  "fps": 24,
+  "duration_s": 5,
+  "ladder_order": 2
+}

@@ -1,0 +1,13 @@
+{
+  "id": "s20-480p-comfy-base",
+  "short": "중간",
+  "title": "중간화질판",
+  "purpose": "turbo와 납품 사이 확인용. LoRA 없는 정석 20스텝.",
+  "engine": "ComfyUI base (spark2)",
+  "task": "t2v-base",
+  "steps": 20,
+  "resolution": "864x480",
+  "fps": 24,
+  "duration_s": 5,
+  "ladder_order": 4
+}

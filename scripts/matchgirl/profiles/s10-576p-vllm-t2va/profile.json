@@ -1,0 +1,13 @@
+{
+  "id": "s10-576p-vllm-t2va",
+  "short": "표준",
+  "title": "표준 스케치판",
+  "purpose": "이야기·연속성 확인용 작업 기준 화질. 래더 첫 주자.",
+  "engine": "vLLM-Omni FL2VA (spark1)",
+  "task": "t2va",
+  "steps": 10,
+  "resolution": "960x576",
+  "fps": 24,
+  "duration_s": 5,
+  "ladder_order": 1
+}
