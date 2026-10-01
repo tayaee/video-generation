@@ -13,6 +13,7 @@ button:hover { background: #2e2e3a; }
 table { border-collapse: collapse; }
 th, td { border: 1px solid #2a2a32; padding: 6px; vertical-align: top; }
 thead th { background: #1a1a21; position: sticky; top: 0; }
+.prof-label { display: inline-block; font-weight: 400; font-size: 11px; color: #9ecbff; margin-top: 2px; }
 tbody th { background: #1a1a21; text-align: center; min-width: 64px; }
 .shot-id { display: block; font-size: 11px; color: #999; max-width: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cell { width: 248px; }

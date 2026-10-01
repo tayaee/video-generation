@@ -50,6 +50,15 @@ function renderGrid() {
   for (const p of pnames) {
     const th = document.createElement("th");
     th.textContent = p;
+    const m = (profiles[p].meta) || {};
+    if (m.short || m.engine) {
+      const sub = document.createElement("span");
+      sub.className = "prof-label";
+      sub.textContent = [m.short, m.steps ? m.steps + "st" : "", m.resolution || ""].filter(Boolean).join(" · ");
+      sub.title = (m.title ? m.title + "\n" : "") + (m.purpose || "") + (m.engine ? "\n" + m.engine : "");
+      th.appendChild(document.createElement("br"));
+      th.appendChild(sub);
+    }
     head.appendChild(th);
   }
   const body = document.getElementById("grid-body");

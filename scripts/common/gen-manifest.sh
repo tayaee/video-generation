@@ -39,6 +39,14 @@ for work in sorted(os.listdir(src)):
         sdir = os.path.join(pdir, prof, "shots")
         if not os.path.isdir(sdir):
             continue
+        pmeta = {}
+        pj = os.path.join(os.path.dirname(os.path.dirname(os.environ["DST"])),
+                          "scripts", "matchgirl", "profiles", prof, "profile.json")
+        if os.path.isfile(pj):
+            try:
+                pmeta = json.load(open(pj))
+            except Exception:
+                pmeta = {}
         shots = []
         for f in sorted(os.listdir(sdir)):
             if not f.endswith(".mp4"):
@@ -71,6 +79,8 @@ for work in sorted(os.listdir(src)):
             })
         if shots:
             profiles[prof] = {"shots": shots}
+            if pmeta:
+                profiles[prof]["meta"] = pmeta
     if profiles:
         works[work] = {"profiles": profiles}
 

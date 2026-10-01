@@ -110,6 +110,7 @@ fi
 curl -s -m 5 "http://127.0.0.1:$H3_PORT/health" >/dev/null \
   || { echo "FAIL: 서버 없음. ./3-serve-fl2va.sh 또는 ./6-serve-ref2va.sh 먼저"; exit 1; }
 mkdir -p "$OUTDIR"
+[ -f "$BASEDIR/profile.json" ] && cp "$BASEDIR/profile.json" "$(dirname "$OUTDIR")/profile.json" 2>/dev/null || true  # 설명 results 미러 (NAS 수집용)
 [ -w "$OUTDIR" ] || { echo "FAIL: 쓰기 불가: $OUTDIR (sudo mkdir -p $OUTDIR && sudo chown -R $(whoami) $OUTDIR)"; exit 1; }
 [ -f "$TIMINGS" ] || echo "shot,id,steps,dur_s,e2e_s" > "$TIMINGS"
 
