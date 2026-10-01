@@ -24,8 +24,18 @@ scripts/common/gen-manifest.sh   # results/ 스캔 → app/gallery.json
 
 1. `main`에 `app/**` 푸시 (또는 Actions에서 수동 실행) →
 2. `deploy.yml`이 `app/`을 아티팩트로 업로드 → Pages 배포.
-3. Pages 설정 필수: Settings → Pages → Source: **GitHub Actions**
-   (branch/docs 방식이면 이 워크플로우가 배포하지 않음).
+
+## Source: GitHub Actions의 의미 (중요)
+
+- Settings → Pages → Source를 **GitHub Actions**로 선택하면,
+  배포 내용은 branch/path 설정과 무관하게 **오직 `deploy.yml`의
+  `upload-pages-artifact` → `path: "app"`이 결정**한다.
+  즉 `/app`의 파일이 사이트 루트(`/`)로 배포된다.
+- 반대로 Source가 branch 방식이면 이 워크플로우는 성공해도 무시되고
+  branch의 해당 폴더가 그대로 서빙된다 (2026-10-01에 이 상태라 404가 났음.
+  API로 `build_type=workflow` 전환하여 해결済み).
+- 배포 대상을 바꾸려면 `deploy.yml`의 `path:`와 `paths:` 트리거를 함께 고친다.
+  (`paths: app/**`는 app 변경 때만 워크플로우가 돌게 하는 필터다.)
 
 ## 영상 소싱 (중요)
 
@@ -55,6 +65,6 @@ SHOTS=03 ./app/serve.sh   # :8001/app/ (LFS 부분 pull + manifest + 서빙)
 
 ## 현재 상태 (2026-10-01)
 
-- work: matchgirl, 샷 01~10 (s50은 01만, 나머지는 빈칸)
+- work: matchgirl, 전샷 01~36 (s50은 생성 중, 나오는 대로 추가)
 - 프로파일 5열: s04 < s08 < s10 < s20 < s50 (이름순 정렬 = 저→고화질)
 - 메타(sidecar dur/e2e/prompt)와 프로파일 설명(profile.json short/engine)이 헤딩·셀에 표시

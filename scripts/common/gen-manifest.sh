@@ -81,6 +81,15 @@ for work in sorted(os.listdir(src)):
             profiles[prof] = {"shots": shots}
             if pmeta:
                 profiles[prof]["meta"] = pmeta
+            es = [s["e2e_s"] for s in shots
+                  if isinstance(s.get("e2e_s"), (int, float))]
+            if es:
+                profiles[prof]["stats"] = {
+                    "shot_count": len(shots),
+                    "avg_e2e_s": round(sum(es) / len(es), 1),
+                    "min_e2e_s": round(min(es), 1),
+                    "max_e2e_s": round(max(es), 1),
+                }
     if profiles:
         works[work] = {"profiles": profiles}
 

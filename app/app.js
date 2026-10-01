@@ -55,11 +55,15 @@ function renderGrid() {
     const th = document.createElement("th");
     th.textContent = p;
     const m = (profiles[p].meta) || {};
-    if (m.short || m.engine) {
+    const st = (profiles[p].stats) || {};
+    const bits = [m.short, m.steps ? m.steps + "st" : "", m.resolution || ""].filter(Boolean);
+    if (st.avg_e2e_s != null) bits.push("샷당 " + Math.round(st.avg_e2e_s) + "초");
+    if (bits.length) {
       const sub = document.createElement("span");
       sub.className = "prof-label";
-      sub.textContent = [m.short, m.steps ? m.steps + "st" : "", m.resolution || ""].filter(Boolean).join(" · ");
-      sub.title = (m.title ? m.title + "\n" : "") + (m.purpose || "") + (m.engine ? "\n" + m.engine : "");
+      sub.textContent = bits.join(" · ");
+      sub.title = (m.title ? m.title + "\n" : "") + (m.purpose || "") + (m.engine ? "\n" + m.engine : "") +
+        (st.avg_e2e_s != null ? "\n평균 " + st.avg_e2e_s + "s/샷 (" + st.shot_count + "샷)" : "");
       th.appendChild(document.createElement("br"));
       th.appendChild(sub);
     }
