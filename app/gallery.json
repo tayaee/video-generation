@@ -1553,6 +1553,33 @@
        "e2e_s": 1622.445,
        "steps": 50,
        "prompt": "Photorealistic, the vision snaps to the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, snow falling harder. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes alone again under the street lamp. Crane up. Cutoff of music, heavy snowfall hush, distant midnight bells."
+      },
+      {
+       "n": "19",
+       "id": "blizzard",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/19_blizzard_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1613.733,
+       "steps": 50,
+       "prompt": "Photorealistic whiteout gust through the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes staggers, shields the bundle inside her coat, snow plastering her reddish-gold hair. Low angle struggle. Blizzard roar, coat flapping, her strained breath."
+      },
+      {
+       "n": "20",
+       "id": "last_matches",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/20_last_matches_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1624.195,
+       "steps": 50,
+       "prompt": "Photorealistic close-up in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes opens the bundle with numb fingers and counts the last matches, three left, frost on the box labels. Shallow focus. Cardboard rub, finger tremble foley, wind underneath."
+      },
+      {
+       "n": "21",
+       "id": "third_strike",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/21_third_strike_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1609.873,
+       "steps": 50,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a third match bursts into a tall steady flame cupped in both hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes face glowing amber. Low angle. Strong flare-up, cupped-hands warmth tone, snow sizzling."
       }
      ],
      "meta": {
@@ -1569,8 +1596,8 @@
       "ladder_order": 5
      },
      "stats": {
-      "shot_count": 18,
-      "avg_e2e_s": 1686.5,
+      "shot_count": 21,
+      "avg_e2e_s": 1676.4,
       "min_e2e_s": 1593.8,
       "max_e2e_s": 3022.6
      }
