@@ -1,0 +1,51 @@
+{
+  "file": "25_falling_star_s50.mp4",
+  "created_at_utc": "2026-10-02T04:04:14Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "6883676",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s50-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 50,
+      "flow_shift": 12,
+      "seed": 1126,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic night sky, one star detaches and falls. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes whispers to the dark in Korean, 오늘 밤 누군가 죽어. Extreme close-up on eyes. Hushed Korean whisper, long reverb tail, total stillness."
+  },
+  "speed": {
+    "e2e_s": 1601.261,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 2407572,
+    "sec_per_step": 32.025,
+    "realtime_factor": 320.25
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 110868,
+      "available": 13739
+    },
+    "memory_after_mb": {
+      "used": 110790,
+      "available": 13817
+    },
+    "swap_used_before_mb": 7700,
+    "swap_used_after_mb": 7692,
+    "gpu_temp_c": {
+      "before": 60,
+      "after": 64
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "file": "26_grandmother_memory_s50.mp4",
+  "created_at_utc": "2026-10-02T04:30:54Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "6883676",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s50-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 50,
+      "flow_shift": 12,
+      "seed": 1127,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic warm flashback, her beloved grandmother lifts the laughing child onto her lap by a fireplace, the only face that ever loved her. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes as a small child giggles. Soft slow motion. Fireplace crackle, kind humming, child giggle."
+  },
+  "speed": {
+    "e2e_s": 1599.355,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 4769221,
+    "sec_per_step": 31.987,
+    "realtime_factor": 319.87
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 110828,
+      "available": 13779
+    },
+    "memory_after_mb": {
+      "used": 110802,
+      "available": 13805
+    },
+    "swap_used_before_mb": 7692,
+    "swap_used_after_mb": 7692,
+    "gpu_temp_c": {
+      "before": 64,
+      "after": 65
+    }
+  }
+}

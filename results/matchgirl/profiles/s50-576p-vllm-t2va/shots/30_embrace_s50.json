@@ -1,0 +1,51 @@
+{
+  "file": "30_embrace_s50.mp4",
+  "created_at_utc": "2026-10-02T06:17:12Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "6883676",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s50-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 50,
+      "flow_shift": 12,
+      "seed": 1131,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic inside the blaze, the grandmother wraps a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes in her shawl, the child sobbing with joy, snowflakes turning to sparks around them. Slow orbit. Shawl fabric, joyful sobs, choir warming."
+  },
+  "speed": {
+    "e2e_s": 1592.991,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 4960265,
+    "sec_per_step": 31.86,
+    "realtime_factor": 318.6
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109702,
+      "available": 14905
+    },
+    "memory_after_mb": {
+      "used": 109773,
+      "available": 14834
+    },
+    "swap_used_before_mb": 7689,
+    "swap_used_after_mb": 7689,
+    "gpu_temp_c": {
+      "before": 66,
+      "after": 66
+    }
+  }
+}
