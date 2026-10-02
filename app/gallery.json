@@ -1670,6 +1670,15 @@
        "e2e_s": 1623.975,
        "steps": 50,
        "prompt": "Photorealistic ascent above snowy rooftops, the grandmother carrying a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes upward, town shrinking below, snowflakes hanging still. Crane soaring. Korean choir and heartbeat slowing together, then quiet."
+      },
+      {
+       "n": "32",
+       "id": "among_stars",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/32_among_stars_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1578.469,
+       "steps": 50,
+       "prompt": "Photorealistic, the grandmother and a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes drift among gentle stars, the child asleep on her shoulder, utterly at peace. Weightless drift. Choir dissolving to silence, one soft bell."
       }
      ],
      "meta": {
@@ -1686,9 +1695,9 @@
       "ladder_order": 5
      },
      "stats": {
-      "shot_count": 31,
-      "avg_e2e_s": 1652.3,
-      "min_e2e_s": 1588.2,
+      "shot_count": 32,
+      "avg_e2e_s": 1650.0,
+      "min_e2e_s": 1578.5,
       "max_e2e_s": 3022.6
      }
     }
