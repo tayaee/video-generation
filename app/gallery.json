@@ -1580,6 +1580,33 @@
        "e2e_s": 1609.873,
        "steps": 50,
        "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a third match bursts into a tall steady flame cupped in both hands. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes face glowing amber. Low angle. Strong flare-up, cupped-hands warmth tone, snow sizzling."
+      },
+      {
+       "n": "22",
+       "id": "tree_vision",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/22_tree_vision_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1600.593,
+       "steps": 50,
+       "prompt": "Photorealistic dream vision, a towering Christmas tree covered in lit candles and painted ornaments. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches up in wonder. Slow tilt up. Soft Korean choir, candle sizzle, ornament glass chimes."
+      },
+      {
+       "n": "23",
+       "id": "ornaments",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/23_ornaments_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1613.058,
+       "steps": 50,
+       "prompt": "Photorealistic inside the vision, glass ornaments reflect her wondering face a hundredfold as a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes touches one gently and it rings. Slow drift. Glass chime, her delighted whisper in Korean, 예쁘다."
+      },
+      {
+       "n": "24",
+       "id": "candles_rise",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/24_candles_rise_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1601.588,
+       "steps": 50,
+       "prompt": "Photorealistic, the tree candles detach and rise into the night sky as stars. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes watches, mouth open. Tilt to sky. Korean choir swelling, rising shimmer tone, wind fading to silence."
       }
      ],
      "meta": {
@@ -1596,8 +1623,8 @@
       "ladder_order": 5
      },
      "stats": {
-      "shot_count": 21,
-      "avg_e2e_s": 1676.4,
+      "shot_count": 24,
+      "avg_e2e_s": 1667.5,
       "min_e2e_s": 1593.8,
       "max_e2e_s": 3022.6
      }

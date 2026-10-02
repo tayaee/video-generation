@@ -1,0 +1,51 @@
+{
+  "file": "22_tree_vision_s50.mp4",
+  "created_at_utc": "2026-10-02T02:43:57Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "28ba5f9",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s50-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 50,
+      "flow_shift": 12,
+      "seed": 1123,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic dream vision, a towering Christmas tree covered in lit candles and painted ornaments. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches up in wonder. Slow tilt up. Soft Korean choir, candle sizzle, ornament glass chimes."
+  },
+  "speed": {
+    "e2e_s": 1600.593,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 5029585,
+    "sec_per_step": 32.012,
+    "realtime_factor": 320.12
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109580,
+      "available": 15027
+    },
+    "memory_after_mb": {
+      "used": 109667,
+      "available": 14940
+    },
+    "swap_used_before_mb": 7650,
+    "swap_used_after_mb": 7650,
+    "gpu_temp_c": {
+      "before": 65,
+      "after": 66
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "file": "23_ornaments_s50.mp4",
+  "created_at_utc": "2026-10-02T03:10:50Z",
+  "environment": {
+    "host": "spark1.local",
+    "gpu": "NVIDIA GB10",
+    "git_rev": "28ba5f9",
+    "server_url": "http://127.0.0.1:8000",
+    "server_model": "/model/FL2VA",
+    "script_profile": "s50-576p-vllm-t2va"
+  },
+  "method": {
+    "endpoint": "POST /v1/videos/sync",
+    "mode": "t2va",
+    "task": "t2va",
+    "params": {
+      "width": 960,
+      "height": 576,
+      "fps": 24,
+      "num_inference_steps": 50,
+      "flow_shift": 12,
+      "seed": 1124,
+      "duration": 5.0,
+      "audio_flow_shift": 3.0
+    },
+    "prompt": "Photorealistic inside the vision, glass ornaments reflect her wondering face a hundredfold as a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes touches one gently and it rings. Slow drift. Glass chime, her delighted whisper in Korean, 예쁘다."
+  },
+  "speed": {
+    "e2e_s": 1613.058,
+    "video_dur_s": 5.207,
+    "mp4_bytes": 5981617,
+    "sec_per_step": 32.261,
+    "realtime_factor": 322.61
+  },
+  "resources": {
+    "memory_before_mb": {
+      "used": 109651,
+      "available": 14956
+    },
+    "memory_after_mb": {
+      "used": 109495,
+      "available": 15112
+    },
+    "swap_used_before_mb": 7650,
+    "swap_used_after_mb": 7700,
+    "gpu_temp_c": {
+      "before": 66,
+      "after": 66
+    }
+  }
+}
