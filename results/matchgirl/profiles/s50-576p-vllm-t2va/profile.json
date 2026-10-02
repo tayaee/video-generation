@@ -1,8 +1,8 @@
 {
   "id": "s50-576p-vllm-t2va",
-  "short": "납품",
-  "title": "납품판",
-  "purpose": "최종 본편용 최고화질. 샷당 약 40분, 전체 약 20시간.",
+  "short": "Final",
+  "title": "Final delivery",
+  "purpose": "Highest quality for the finished film. About 40 min/shot, 20 h total.",
   "engine": "vLLM-Omni FL2VA (spark1)",
   "task": "t2va",
   "steps": 50,

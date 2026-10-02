@@ -1,0 +1,429 @@
+{
+  "file": "matchgirl_s50.mp4",
+  "created_at_utc": "2026-10-02T08:58:41Z",
+  "environment": {
+    "host": "spark1.local",
+    "git_rev": "347eb1f",
+    "slug": "matchgirl",
+    "profile": "s10-576p-vllm-t2va"
+  },
+  "method": {
+    "assembly": "ffmpeg concat -c copy (재인코딩 없음)",
+    "indir": "/home/user1/git/video-generation/results/matchgirl/profiles/s50-576p-vllm-t2va/shots",
+    "expect_s": 180.0
+  },
+  "assembly": {
+    "e2e_s": 0,
+    "merged_dur_s": 187.452,
+    "mp4_bytes": 149188244
+  },
+  "shots_time": {
+    "clip_count": 36,
+    "clip_dur_sum_s": 187.452,
+    "gen_e2e_sum_s": 59247.58,
+    "gen_e2e_sum_h": 16.46,
+    "steps_seen": [
+      "50"
+    ],
+    "per_shot_e2e": [
+      {
+        "shot": "1",
+        "id": "01_morning_attic",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1643.801
+      },
+      {
+        "shot": "2",
+        "id": "02_lost_slippers",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 3022.633
+      },
+      {
+        "shot": "3",
+        "id": "03_dusk_street",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1596.804
+      },
+      {
+        "shot": "4",
+        "id": "04_barefoot_snow",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1604.263
+      },
+      {
+        "shot": "5",
+        "id": "05_unsold_matches",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1603.589
+      },
+      {
+        "shot": "6",
+        "id": "06_rich_family",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1606.249
+      },
+      {
+        "shot": "7",
+        "id": "07_window_feast",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1593.812
+      },
+      {
+        "shot": "8",
+        "id": "08_no_home",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1595.902
+      },
+      {
+        "shot": "9",
+        "id": "09_first_strike",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1600.313
+      },
+      {
+        "shot": "10",
+        "id": "10_stove_vision",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1597.643
+      },
+      {
+        "shot": "11",
+        "id": "11_warm_hands",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1620.875
+      },
+      {
+        "shot": "12",
+        "id": "12_vision_dies",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1608.697
+      },
+      {
+        "shot": "13",
+        "id": "13_cold_returns",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1602.846
+      },
+      {
+        "shot": "14",
+        "id": "14_second_strike",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1609.223
+      },
+      {
+        "shot": "15",
+        "id": "15_goose_vision",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1612.529
+      },
+      {
+        "shot": "16",
+        "id": "16_goose_rises",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1617.172
+      },
+      {
+        "shot": "17",
+        "id": "17_almost_taste",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1597.322
+      },
+      {
+        "shot": "18",
+        "id": "18_dark_again",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1622.445
+      },
+      {
+        "shot": "19",
+        "id": "19_blizzard",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1613.733
+      },
+      {
+        "shot": "20",
+        "id": "20_last_matches",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1624.195
+      },
+      {
+        "shot": "21",
+        "id": "21_third_strike",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1609.873
+      },
+      {
+        "shot": "22",
+        "id": "22_tree_vision",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1600.593
+      },
+      {
+        "shot": "23",
+        "id": "23_ornaments",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1613.058
+      },
+      {
+        "shot": "24",
+        "id": "24_candles_rise",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1601.588
+      },
+      {
+        "shot": "25",
+        "id": "25_falling_star",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1601.261
+      },
+      {
+        "shot": "26",
+        "id": "26_grandmother_memory",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1599.355
+      },
+      {
+        "shot": "27",
+        "id": "27_bundle_decision",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1597.906
+      },
+      {
+        "shot": "28",
+        "id": "28_bundle_blaze",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1588.239
+      },
+      {
+        "shot": "29",
+        "id": "29_grandmother",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1598.26
+      },
+      {
+        "shot": "30",
+        "id": "30_embrace",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1592.991
+      },
+      {
+        "shot": "31",
+        "id": "31_ascent",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1623.975
+      },
+      {
+        "shot": "32",
+        "id": "32_among_stars",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1578.469
+      },
+      {
+        "shot": "33",
+        "id": "33_dawn_alley",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1589.648
+      },
+      {
+        "shot": "34",
+        "id": "34_dawn_smile",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1623.921
+      },
+      {
+        "shot": "35",
+        "id": "35_found_bells",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1612.832
+      },
+      {
+        "shot": "36",
+        "id": "36_new_year",
+        "steps": "50",
+        "dur_s": "5",
+        "e2e_s": 1621.563
+      }
+    ]
+  },
+  "clips": [
+    {
+      "file": "01_morning_attic_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "02_lost_slippers_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "03_dusk_street_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "04_barefoot_snow_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "05_unsold_matches_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "06_rich_family_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "07_window_feast_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "08_no_home_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "09_first_strike_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "10_stove_vision_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "11_warm_hands_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "12_vision_dies_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "13_cold_returns_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "14_second_strike_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "15_goose_vision_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "16_goose_rises_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "17_almost_taste_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "18_dark_again_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "19_blizzard_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "20_last_matches_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "21_third_strike_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "22_tree_vision_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "23_ornaments_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "24_candles_rise_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "25_falling_star_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "26_grandmother_memory_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "27_bundle_decision_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "28_bundle_blaze_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "29_grandmother_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "30_embrace_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "31_ascent_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "32_among_stars_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "33_dawn_alley_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "34_dawn_smile_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "35_found_bells_s50.mp4",
+      "dur_s": 5.207
+    },
+    {
+      "file": "36_new_year_s50.mp4",
+      "dur_s": 5.207
+    }
+  ]
+}
