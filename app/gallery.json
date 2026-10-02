@@ -1499,6 +1499,60 @@
        "e2e_s": 1608.697,
        "steps": 50,
        "prompt": "Photorealistic, the same night, moments later, the stove vision gutters and dissolves back into the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes stares at the dead match, smile fading. Match cut to wide. Flame sputter, cold wind rushing back, faint whimper."
+      },
+      {
+       "n": "13",
+       "id": "cold_returns",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/13_cold_returns_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1602.846,
+       "steps": 50,
+       "prompt": "Photorealistic, the same night, moments later, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes shivering hard in the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, wrapping the coat tighter, teeth chattering, deciding on a second match. Trembling close-up. Chattering teeth, shuddering breaths, snow hissing on stone."
+      },
+      {
+       "n": "14",
+       "id": "second_strike",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/14_second_strike_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1609.223,
+       "steps": 50,
+       "prompt": "Photorealistic the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, a second match flares against the brick, brighter, lighting falling snowflakes like sparks. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes gasps. Slow motion flare. Strike scrape, whoosh of flame, tiny awed gasp."
+      },
+      {
+       "n": "15",
+       "id": "goose_vision",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/15_goose_vision_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1612.529,
+       "steps": 50,
+       "prompt": "Photorealistic dream vision, a roast goose steaming on a white tablecloth, stuffing and apples, carving knife gleaming. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes leans in wide-eyed. Push-in. Rich sizzle, clink of the knife, warm room tone."
+      },
+      {
+       "n": "16",
+       "id": "goose_rises",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/16_goose_rises_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1617.172,
+       "steps": 50,
+       "prompt": "Photorealistic dream logic, the roast goose rises with knife and fork in its breast and waddles toward the poor child. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes laughs in delight. Gentle tracking. Playful sizzle, soft child laughter, music-box notes."
+      },
+      {
+       "n": "17",
+       "id": "almost_taste",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/17_almost_taste_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1597.322,
+       "steps": 50,
+       "prompt": "Photorealistic, a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes reaches both hands for the waddling goose, mouth open, and the vision bursts like a soap bubble into cold sparks. Her smile freezes. Rack focus. Bubble pop, cold rush, tiny disappointed cry."
+      },
+      {
+       "n": "18",
+       "id": "dark_again",
+       "mp4": "results/matchgirl/profiles/s50-576p-vllm-t2va/shots/18_dark_again_s50.mp4",
+       "dur_s": 5.207,
+       "e2e_s": 1622.445,
+       "steps": 50,
+       "prompt": "Photorealistic, the vision snaps to the same narrow alley corner between two dark brick houses at night, snow piled against the walls, a single dim street lamp glowing, the same night, moments later, snow falling harder. a barefoot girl of about nine with reddish-gold hair under a patched gray coat, clutching a bundle of matchboxes alone again under the street lamp. Crane up. Cutoff of music, heavy snowfall hush, distant midnight bells."
       }
      ],
      "meta": {
@@ -1515,8 +1569,8 @@
       "ladder_order": 5
      },
      "stats": {
-      "shot_count": 12,
-      "avg_e2e_s": 1724.5,
+      "shot_count": 18,
+      "avg_e2e_s": 1686.5,
       "min_e2e_s": 1593.8,
       "max_e2e_s": 3022.6
      }
